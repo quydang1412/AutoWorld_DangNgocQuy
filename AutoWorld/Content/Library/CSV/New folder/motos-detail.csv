@@ -1,0 +1,11 @@
+id;name;price;weight;petrolTankCapacity;engineType;maximumPower;maximumMoment;cylinderCapacity;img
+xe16;Honda Air Blade 125/150;$1,777;113kg;4.4L;4-stroke, 1 cylinder;9.6 kw / 8500 rpm;13.3 Nm / 5000 rpm;149.3 cm3;images/moto/dtmoto1.png
+xe17;Honda Lead 125Fi;$1,650;113kg;6.0L;4-stroke, 1 cylinder;7.9 kw / 7500 rpm;11.4 Nm / 5000 rpm;124.8 cm3;images/moto/dtmoto2.png
+xe18;Honda Future 125Fi;$1,301;104kg;4.6L;4-stroke, 1 cylinder;6.83 kw / 7500 rpm;10.2 Nm / 5500 rpm;124.9 cm3;images/moto/dtmoto3.png
+xe19;Honda Vision;$1,295;96kg;5.2L;4-stroke, 1 cylinder;6.59 kw / 7500 rpm;9.23 Nm / 5500 rpm;108.2 cm3;images/moto/dtmoto4.png
+xe20;Honda SH300i ABS;$11,933;169kg;9.1L;4-stroke, single-cylinder 4-valve;18.5 kw / 7500 rpm;25.5 Nm / 5000 rpm;279 cm3;images/moto/dtmoto5.png
+xe21;Yamaha Exciter 150;$2,112;117kg;4.2L;4-stroke, single-cylinder 4-valve;11.3 kw / 8500 rpm;13.8 Nm / 7000 rpm;150 cm3;images/moto/dtmoto6.png
+xe22;Yamaha TFX 150;$3,147;135kg;10.2L;4-stroke, single-cylinder 4-valve;11.3 kw / 8500 rpm;13.8 Nm / 7000 rpm;149.7 cm3;images/moto/dtmoto7.png
+xe23;Yamaha YZF-R15;$3,024;137kg;11L;4-stroke, single-cylinder 4-valve;14.2 kw / 10000 rpm;14.7 Nm / 8500 rpm;155 cm3;images/moto/dtmoto8.png
+xe24;Yamaha MT-15;$2,979;133kg;10L;4-stroke, single-cylinder 4-valve;14.2 kw / 10000 rpm;14.7 Nm / 8500 rpm;155 cm3;images/moto/dtmoto9.png
+xe25;Yamaha MT-03;$5,349;168kg;14L;4-stroke, 2-cylinder 8-valve;30.9 kw / 10750 rpm;29.6 Nm / 9000 rpm;321 cm3;images/moto/dtmoto10.png

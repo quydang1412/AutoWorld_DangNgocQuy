@@ -1,0 +1,200 @@
+﻿@model IEnumerable<AutoWorld.Models.Products>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Categories.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location.LocalName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categories.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.LocalName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+
+    </table>*@
+
+<main>
+
+    <!-- Carousel -->
+    <div id="slides" class="carousel slide " data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="
+					active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+            <li data-target="#slides" data-slide-to="3"></li>
+            <li data-target="#slides" data-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/Content/Library/images/carousel4.jpg" alt="">
+                <div class=" carousel-caption d-none d-md-block">
+                    <h1>Welcome to AutoWorld</h1>
+                    <p class="slogan">The Power of Dreams</p>
+                    <!-- <p>
+                        <a href="products.html" class="btn btn-danger">All vehicles</a>
+                    </p> -->
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel0.jpg" alt="">
+
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel1.jpg" alt="">
+
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel2.jpg" alt="">
+
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel3.jpg" alt="">
+
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon text-danger"></span>
+        </a>
+        <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon text-danger"></span>
+        </a>
+    </div>
+    <!-- /Carousel -->
+    <!-- --search-- -->
+    <div class="advancedSearch container mt-4">
+        <div class="name row ">
+            <select id="myselect1" onchange="filterOption()" name="name" class="form-control form-control-lg col-md-2 col-6">
+                <option value="all"> Brands</option>
+                <option value="Toyota"> Toyota</option>
+                <option value="Audi"> Audi</option>
+                <option value="Mercedes"> Mercedes</option>
+                <option value="Honda"> Honda</option>
+                <option value="Yamaha"> Yamaha</option>
+            </select>
+            <select id="myselect2" name="model" class="form-control form-control-lg col-md-3 col-6">
+                <option value="all"> All models</option>
+                <option value="SUV"> SUV</option>
+                <option value="Sedan"> Sedan</option>
+                <option value="moto">Moto</option>
+            </select>
+            <select id="myselect3" name="price" class="form-control form-control-lg col-md-3 col-6">
+                <option value="all">All price</option>
+                <option value="prl2">$ lower 2,000</option>
+                <option value="pr2-5">$ 2,000 - 5,000</option>
+                <option value="pr5-15">$ 5,000 - 15,000</option>
+                <option value="pr15-50">$ 15,000 - 50,000</option>
+                <option value="pr50-100">$ 50,000 - 100,000</option>
+                <option value="pr100-200">$ 100,000 - 200,000</option>
+                <option value="pru200">$ upper 200,000</option>
+            </select>
+            <select id="myselect4" name="showRoom" class="form-control form-control-lg col-md-4 col-6">
+                <option class="filterOp all" value="all"> Location dealer</option>
+                <option class="filterOp all Toyota Audi " value="no1"> 6 Le Loi, Hue, Vietnam</option>
+                <option class="filterOp all Mercedes Honda Yamaha " value="no2"> 11 Ly Thuong Kiet, Hue, Vietnam</option>
+                <option class="filterOp all Toyota Audi" value="no3"> 8 Hai Ba Trung, Hue, Vietnam</option>
+                <option class="filterOp all Mercedes Honda Yamaha" value="no4"> 20 Hung Vuong, Hue, Vietnam</option>
+            </select>
+            <button type="" class="btn btn4 col-2 mt-2 bg-success ml-auto" onclick="filterSelection()">Search</button>
+        </div>
+    </div>
+    <div class="container container-fluid mt-3 col">
+        <div class="filterDiv col all no1 no2 no3 no4 Toyota Audi Mercedes">
+            <h1>Cars</h1>
+            <hr>
+        </div>
+        <!-- --line1-- -->
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <!-- Product  -->
+
+                <div class=" col-sm-6 col-lg-4 product-grid1">
+                    <div class="image">
+                        <a href="details.html?idsToTake=xe01" title="">
+                            <img src="~/Content/Library/@Html.DisplayFor(modelItem => item.Image)" alt="">
+                        </a>
+                        <h4 class="text-center">@Html.DisplayFor(modelItem => item.Name)</h4>
+                        <h5 class="text-center">Price: $@Html.DisplayFor(modelItem => item.Price)</h5>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "buy btn btn-danger btn-lg " }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }, htmlAttributes: new { @class = "buy btn btn-danger btn-lg " }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, htmlAttributes: new { @class = "buy btn btn-danger btn-lg " })
+
+                        @*<h5 class="text-center">@Html.DisplayFor(modelItem => item.description) seat</h5>*@
+                        @*<a href="details.html?idsToTake=xe01" class=" buy btn btn-danger btn-lg ">Details</a>*@
+                        @{
+                            //JsonConvert.SerializeObject
+                            //Convert.
+                        }
+                    </div>
+                </div>
+                <!-- ./Product -->
+            }
+
+        </div>
+        <!-- line8 -->
+    </div>
+
+
+
+
+</main>
+<link rel="stylesheet" href="~/Content/Library/css/products.css">

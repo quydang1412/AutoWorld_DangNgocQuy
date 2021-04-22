@@ -1,0 +1,184 @@
+﻿@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoWorld</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @*<link href="~/Content/Library/" rel="stylesheet" />*@
+
+    @*@Styles.Render("~/Content/Library/css")
+        @Styles.Render("~/Content/Library/jquery")
+        @Styles.Render("~/Content/Library/js")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="~/Content/Library/libs/bootstrap/css/bootstrap.min.css">
+    <!-- Fontawesome  -->
+    <script type="text/javascript" src="~/Content/Library/libs/font-awesome/js/all.js"></script>
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="~/Content/Library/libs/jquery/jquery-3.5.1.slim.js"></script>
+    <script src="~/Content/Library/libs/jquery/popper_1.12.9.min.js"></script>
+    <script type="text/javascript" src="~/Content/Library/libs/bootstrap/js/bootstrap.min.js"></script>
+    <!-- my css -->
+    <link rel="stylesheet" href="~/Content/Library/css/main.css">
+
+</head>
+<body>
+    <!-- header -->
+    <header id="header" class="">
+        <!-- navigation -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+            <a href="HomePage/Index" title="">
+                <img src="~/Content/Library/images/logo.png" alt="" height="60px">
+            </a>
+            <a href="HomePage/Index" title="Welcome to AutoWorld" class="navbar-brand" id="caption"><span id="auto">Auto</span><span id="world">World</span></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class=" collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="/HomePage/Index" title="" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/About/Index" title="" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Products/Index" title="" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Services/Index" title="" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Loan/Index" title="" class="nav-link">Loan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Contact/Index" title="" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Sitemap/Index" title="" class="nav-link">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Account/Login" title="" class="nav-link">Login</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /navigation -->
+    </header>
+    <!-- /header -->
+    <!-- main -->
+    @RenderBody()
+    <!-- /main -->
+    <!-- footer	 -->
+    <footer>
+        <div class="container-fluid padding pt-3">
+            <div class="row">
+                <div class="inf col-sm-6 col-md-3 pl-4 pr-0">
+                    <p class="font-weight-bold">Our company</p>
+                    <p>6 LeLoi, Hue City</p>
+                    <p>Phone: <a href="tel:+84123456789" title="">+84 123456789</a></p>
+                    <p>Email: <a href="mailto:autoworld05@gmail.com" title="">autoworld05@gmail.com</a></p>
+                </div>
+                <div class="inf col-sm-6 col-md-2 pl-4 ">
+                    <p class="font-weight-bold">Menu</p>
+                    <p><a href="index.html" title="">Home</a></p>
+                    <p><a href="about.html" title="">About us</a></p>
+                    <p><a href="products.html" title="">Products</a></p>
+                    <p><a href="loan.html" title="">Loan</a></p>
+                    <p><a href="contact.html" title="">Contact</a></p>
+                </div>
+                <div class="inf col-sm-6 col-md-2 pl-4">
+                    <p class="font-weight-bold">Services</p>
+                    <p><a href="services.html?#no1">Warranty Policy</a></p>
+                    <p><a href="services.html?#no2">Maintenance service</a></p>
+                    <p><a href="services.html?#no3">Repair Services</a></p>
+                </div>
+                <div class="inf col-sm-6 col-md-5 pl-4">
+                    <p class="font-weight-bold">Subscribe</p>
+                    <p class="pb-2">Subscribe to receive the latest news from us</p>
+                    <form action="success.html">
+                        <div class="input-group">
+                            <input type="email" placeholder="Email address" class="form-control form-email-widget" required>
+                            <span class="input-group-append">
+                                <button id="send" type="submit" class="btn-email btn-success">Submit</button>
+                            </span>
+                        </div>
+                    </form>
+                    <div class="padding">
+                        <div class=" my-3">
+                            <p id="contact1" class="font-weight-bold">Contact us</p>
+                        </div>
+                        <div class="social1 text-center padding my-auto ">
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid " id="privacy">
+            <div class="row align-items-center " style="min-height: 30px;">
+                <p class=" col-12 text-white my-auto text-center">© 2020 by AutoWorld </p>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Library")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

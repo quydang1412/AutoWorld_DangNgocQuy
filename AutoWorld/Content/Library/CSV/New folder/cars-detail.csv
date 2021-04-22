@@ -1,0 +1,16 @@
+id;name;price;seats;model;fuel;origin;other;img
+xe01;Toyota Fortuner Legender 2.8AT 4x4;$61,875 ;7;SUV;Oil;Domestic vehicles;6-speed automatic ;images/car/dtcar1.png
+xe02;Toyota Corolla Altis 1.8G CVT;$32,957 ;5;Sedan;Gasoline;Domestic vehicles;Automatic;images/car/dtcar2.png
+xe03;Toyota Land Cruiser;$173,619 ;7;SUV;Gasoline;Imported cars;6-speed automatic ;images/car/dtcar3.png
+xe04;Toyota Land Cruiser Prado;$102,446 ;7;SUV;Gasoline;Imported cars;6-speed automatic ;images/car/dtcar4.png
+xe05;Toyota Camry;$44,378 ;5;Sedan;Gasoline;Imported cars;6-speed automatic ;images/car/dtcar5.png
+xe06;Audi A7;$107,789;5;Sedan;Gasoline;Unknown;7-speed automatic;images/car/dtcar6.png
+xe07;Audi A8;$172,953;5;Sedan;Gasoline;Unknown;8-speed automatic;images/car/dtcar7.png
+xe08;Audi Q5;$107,912;5;SUV;Gasoline;Imported cars;7-speed automatic;images/car/dtcar8.png
+xe09;Audi Q7;$147,802;7;SUV;Gasoline;Imported cars;8-speed automatic;images/car/dtcar9.png
+xe10;Audi Q8;$181,538;8;SUV;Gasoline;Imported cars;8-speed automatic;images/car/dtcar10.png
+xe11;Mercedes-Benz GLA SUV;$80,228;5;SUV;Gasoline;Imported cars;7-speed automatic;images/car/dtcar11.png
+xe12;Mercedes-Benz GLB SUV;$86,271;7;SUV;Gasoline;Imported cars;8-speed automatic;images/car/dtcar12.png
+xe13;Mercedes-Benz GLC SUV;$103,286;5;SUV;Gasoline;Imported cars;9-speed automatic;images/car/dtcar13.png
+xe14;Mercedes-Benz GLE SUV;$188,401;7;SUV;Gasoline;Imported cars;9-speed automatic;images/car/dtcar14.png
+xe15;Mercedes-Benz GLS SUV;$211,890;8;SUV;Gasoline;Imported cars;9-speed automatic;images/car/dtcar15.png

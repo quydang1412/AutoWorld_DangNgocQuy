@@ -1,0 +1,112 @@
+[
+  {
+    "id": "xe16",
+    "name": "Honda Air Blade 125/150",
+    "price": "$1,777",
+    "weight": "113kg",
+    "petrolTankCapacity": "4.4L",
+    "engineType": "4-stroke, 1 cylinder",
+    "maximumPower": "9.6 kw / 8500 rpm",
+    "maximumMoment": "13.3 Nm / 5000 rpm",
+    "cylinderCapacity": "149.3 cm3"
+  },
+  {
+    "id": "xe17",
+    "name": "Honda Lead 125Fi",
+    "price": "$1,650",
+    "weight": "113kg",
+    "petrolTankCapacity": "6.0L",
+    "engineType": "4-stroke, 1 cylinder",
+    "maximumPower": "7.9 kw / 7500 rpm",
+    "maximumMoment": "11.4 Nm / 5000 rpm",
+    "cylinderCapacity": "124.8 cm3"
+  },
+  {
+    "id": "xe18",
+    "name": "Honda Future 125Fi",
+    "price": "$1,301",
+    "weight": "104kg",
+    "petrolTankCapacity": "4.6L",
+    "engineType": "4-stroke, 1 cylinder",
+    "maximumPower": "6.83 kw / 7500 rpm",
+    "maximumMoment": "10.2 Nm / 5500 rpm",
+    "cylinderCapacity": "124.9 cm3"
+  },
+  {
+    "id": "xe19",
+    "name": "Honda Vision",
+    "price": "$1,295",
+    "weight": "96kg",
+    "petrolTankCapacity": "5.2L",
+    "engineType": "4-stroke, 1 cylinder",
+    "maximumPower": "6.59 kw / 7500 rpm",
+    "maximumMoment": "9.23 Nm / 5500 rpm",
+    "cylinderCapacity": "108.2 cm3"
+  },
+  {
+    "id": "xe20",
+    "name": "Honda SH300i ABS",
+    "price": "$11,933",
+    "weight": "169kg",
+    "petrolTankCapacity": "9.1L",
+    "engineType": "4-stroke, single-cylinder 4-valve",
+    "maximumPower": "18.5 kw / 7500 rpm",
+    "maximumMoment": "25.5 Nm / 5000 rpm",
+    "cylinderCapacity": "279 cm3"
+  },
+  {
+    "id": "xe21",
+    "name": "Yamaha Exciter 150",
+    "price": "$2,112",
+    "weight": "117kg",
+    "petrolTankCapacity": "4.2L",
+    "engineType": "4-stroke, single-cylinder 4-valve",
+    "maximumPower": "11.3 kw / 8500 rpm",
+    "maximumMoment": "13.8 Nm / 7000 rpm",
+    "cylinderCapacity": "150 cm3"
+  },
+  {
+    "id": "xe22",
+    "name": "Yamaha TFX 150",
+    "price": "$3,147",
+    "weight": "135kg",
+    "petrolTankCapacity": "10.2L",
+    "engineType": "4-stroke, single-cylinder 4-valve",
+    "maximumPower": "11.3 kw / 8500 rpm",
+    "maximumMoment": "13.8 Nm / 7000 rpm",
+    "cylinderCapacity": "149.7 cm3"
+  },
+  {
+    "id": "xe23",
+    "name": "Yamaha YZF-R15",
+    "price": "$3,024",
+    "weight": "137kg",
+    "petrolTankCapacity": "11L",
+    "engineType": "4-stroke, single-cylinder 4-valve",
+    "maximumPower": "14.2 kw / 10000 rpm",
+    "maximumMoment": "14.7 Nm / 8500 rpm",
+    "cylinderCapacity": "155 cm3"
+  },
+  {
+    "id": "xe24",
+    "name": "Yamaha MT-15",
+    "price": "$2,979",
+    "weight": "133kg",
+    "petrolTankCapacity": "10L",
+    "engineType": "4-stroke, single-cylinder 4-valve",
+    "maximumPower": "14.2 kw / 10000 rpm",
+    "maximumMoment": "14.7 Nm / 8500 rpm",
+    "cylinderCapacity": "155 cm3"
+  },
+  {
+    "id": "xe25",
+    "name": "Yamaha MT-03",
+    "price": "$5,349",
+    "weight": "168kg",
+    "petrolTankCapacity": "14L",
+    "engineType": "4-stroke, 2-cylinder 8-valve",
+    "maximumPower": "30.9 kw / 10750 rpm",
+    "maximumMoment": "29.6 Nm / 9000 rpm",
+    "cylinderCapacity": "321 cm3"
+  }
+]

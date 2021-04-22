@@ -1,0 +1,183 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoWorld</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @*<link href="~/Content/Library/" rel="stylesheet" />*@
+
+    @*@Styles.Render("~/Content/Library/css")
+        @Styles.Render("~/Content/Library/jquery")
+        @Styles.Render("~/Content/Library/js")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="~/Content/Library/libs/bootstrap/css/bootstrap.min.css">
+    <!-- Fontawesome  -->
+    <script type="text/javascript" src="~/Content/Library/libs/font-awesome/js/all.js"></script>
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="~/Content/Library/libs/jquery/jquery-3.5.1.slim.js"></script>
+    <script src="~/Content/Library/libs/jquery/popper_1.12.9.min.js"></script>
+    <script type="text/javascript" src="~/Content/Library/libs/bootstrap/js/bootstrap.min.js"></script>
+    <!-- my css -->
+    <link rel="stylesheet" href="~/Content/Library/css/main.css">
+
+</head>
+<body>
+    <!-- header -->
+    <header id="header" class="">
+        <!-- navigation -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+            <a href="HomePage/Index" title="">
+                <img src="~/Content/Library/images/logo.png" alt="" height="60px">
+            </a>
+            <a href="HomePage/Index" title="Welcome to AutoWorld" class="navbar-brand" id="caption"><span id="auto">Auto</span><span id="world">World</span></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class=" collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    @*<li class="nav-item dropdown">
+            <a href="" title="" class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <a href="#" class="dropdown-item">abc</a>
+                <a href="#" class="dropdown-item">def</a>
+            </div>
+        </li>*@
+                    <li class="nav-item">
+                        <a href="" title="" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="" title="" class="nav-link dropdown-toggle" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a href="#" class="dropdown-item">Add New</a>
+                            <a href="#" class="dropdown-item">All Categories</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" title="" class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <a href="@Url.Action("Create", "Products")" class="dropdown-item">Add New</a>
+                            <a href="#" class="dropdown-item">All Products</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" title="" class="nav-link dropdown-toggle" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Orders</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <a href="#" class="dropdown-item">Add New</a>
+                            <a href="#" class="dropdown-item">All orders</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" title="" class="nav-link dropdown-toggle" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                            <a href="#" class="dropdown-item">Add New</a>
+                            <a href="#" class="dropdown-item">All Users</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="" title="" class="nav-link dropdown-toggle" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="~/Content/Library/images/users/user.png" class="img-circle" alt="User Image" style="max-width:25px;">@Context.GetOwinContext().Authentication.User.Identity.Name</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                            <a href="@Url.Action("SignOut", "Account", new { area = ""})" class="dropdown-item">Sign Out</a>
+                            
+                        </div>
+                    </li>
+
+
+
+                    @*<li class="nav-item">
+            <a href="" title="" class="nav-link">Categories</a>
+        </li>
+        <li class="nav-item">
+            <a href="/Products/Index" title="" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+            <a href="" title="" class="nav-link">Orders</a>
+        </li>
+        <li class="nav-item">
+            <a href="/Loan/Index" title="" class="nav-link">Users</a>
+        </li>*@
+
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /navigation -->
+    </header>
+    <!-- /header -->
+    <!-- main -->
+    @RenderBody()
+    <!-- /main -->
+    <!-- footer	 -->
+    <footer>
+        <div class="container-fluid padding pt-3">
+            <div class="row">
+                <div class="inf col-sm-6 col-md-3 pl-4 pr-0">
+                    <p class="font-weight-bold">Our company</p>
+                    <p>6 LeLoi, Hue City</p>
+                    <p>Phone: <a href="tel:+84123456789" title="">+84 123456789</a></p>
+                    <p>Email: <a href="mailto:autoworld05@gmail.com" title="">autoworld05@gmail.com</a></p>
+                </div>
+                <div class="inf col-sm-6 col-md-2 pl-4 ">
+                    <p class="font-weight-bold">Menu</p>
+                    <p><a href="index.html" title="">Home</a></p>
+                    <p><a href="about.html" title="">About us</a></p>
+                    <p><a href="products.html" title="">Products</a></p>
+                    <p><a href="loan.html" title="">Loan</a></p>
+                    <p><a href="contact.html" title="">Contact</a></p>
+                </div>
+                <div class="inf col-sm-6 col-md-2 pl-4">
+                    <p class="font-weight-bold">Services</p>
+                    <p><a href="services.html?#no1">Warranty Policy</a></p>
+                    <p><a href="services.html?#no2">Maintenance service</a></p>
+                    <p><a href="services.html?#no3">Repair Services</a></p>
+                </div>
+                <div class="inf col-sm-6 col-md-5 pl-4">
+                    <p class="font-weight-bold">Subscribe</p>
+                    <p class="pb-2">Subscribe to receive the latest news from us</p>
+                    <form action="success.html">
+                        <div class="input-group">
+                            <input type="email" placeholder="Email address" class="form-control form-email-widget" required>
+                            <span class="input-group-append">
+                                <button id="send" type="submit" class="btn-email btn-success">Submit</button>
+                            </span>
+                        </div>
+                    </form>
+                    <div class="padding">
+                        <div class=" my-3">
+                            <p id="contact1" class="font-weight-bold">Contact us</p>
+                        </div>
+                        <div class="social1 text-center padding my-auto ">
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid " id="privacy">
+            <div class="row align-items-center " style="min-height: 30px;">
+                <p class=" col-12 text-white my-auto text-center">© 2020 by AutoWorld </p>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Library")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

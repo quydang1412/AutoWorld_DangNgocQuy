@@ -1,0 +1,252 @@
+[
+  {
+    "id": "xe1",
+    "name": "Toyota Fortuner Legender 2.8AT 4x4",
+    "price": "$61,875",
+    "seats": 7,
+    "model": "SUV",
+    "fuel": "Oil",
+    "origin": "Domestic vehicles",
+    "other": "6-speed automatic"
+  },
+  {
+    "id": "xe2",
+    "name": "Toyota Corolla Altis 1.8G CVT",
+    "price": "$32,957",
+    "seats": 5,
+    "model": "Sedan",
+    "fuel": "Gasoline",
+    "origin": "Domestic vehicles",
+    "other": "Automatic"
+  },
+  {
+    "id": "xe3",
+    "name": "Toyota Land Cruiser",
+    "price": "$173,619",
+    "seats": 7,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "6-speed automatic"
+  },
+  {
+    "id": "xe4",
+    "name": "Toyota Land Cruiser Prado",
+    "price": "$102,446",
+    "seats": 7,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "6-speed automatic"
+  },
+  {
+    "id": "xe5",
+    "name": "Toyota Camry",
+    "price": "$44,378",
+    "seats": 5,
+    "model": "Sedan",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "6-speed automatic"
+  },
+  {
+    "id": "xe6",
+    "name": "Audi A7",
+    "price": "$107,789",
+    "seats": 5,
+    "model": "Sedan",
+    "fuel": "Gasoline",
+    "origin": "Unknown",
+    "other": "7-speed automatic"
+  },
+  {
+    "id": "xe7",
+    "name": "Audi A8",
+    "price": "$172,953",
+    "seats": 5,
+    "model": "Sedan",
+    "fuel": "Gasoline",
+    "origin": "Unknown",
+    "other": "8-speed automatic"
+  },
+  {
+    "id": "xe8",
+    "name": "Audi Q5",
+    "price": "$107,912",
+    "seats": 5,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "7-speed automatic"
+  },
+  {
+    "id": "xe9",
+    "name": "Audi Q7",
+    "price": "$147,802",
+    "seats": 7,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "8-speed automatic"
+  },
+  {
+    "id": "xe10",
+    "name": "Audi Q8",
+    "price": "$181,538",
+    "seats": 8,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "8-speed automatic"
+  },
+  {
+    "id": "xe11",
+    "name": "Mercedes-Benz GLA SUV",
+    "price": "$80,228",
+    "seats": 5,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "7-speed automatic"
+  },
+  {
+    "id": "xe12",
+    "name": "Mercedes-Benz GLB SUV",
+    "price": "$86,271",
+    "seats": 7,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "8-speed automatic"
+  },
+  {
+    "id": "xe13",
+    "name": "Mercedes-Benz GLC SUV",
+    "price": "$103,286",
+    "seats": 5,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "9-speed automatic"
+  },
+  {
+    "id": "xe14",
+    "name": "Mercedes-Benz GLE SUV",
+    "price": "$188,401",
+    "seats": 7,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "9-speed automatic"
+  },
+  {
+    "id": "xe15",
+    "name": "Mercedes-Benz GLS SUV",
+    "price": "$211,890",
+    "seats": 8,
+    "model": "SUV",
+    "fuel": "Gasoline",
+    "origin": "Imported cars",
+    "other": "9-speed automatic"
+  },
+  {
+    "id": "xe16",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  },
+  {
+    "id": "xe17",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  },
+  {
+    "id": "xe18",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  },
+  {
+    "id": "xe19",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  },
+  {
+    "id": "xe20",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  },
+  {
+    "id": "xe21",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  },
+  {
+    "id": "xe22",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  },
+  {
+    "id": "xe23",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  },
+  {
+    "id": "xe24",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  },
+  {
+    "id": "xe25",
+    "name": "",
+    "price": "",
+    "seats": "",
+    "model": "",
+    "fuel": "",
+    "origin": "",
+    "other": ""
+  }
+]

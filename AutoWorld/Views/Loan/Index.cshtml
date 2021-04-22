@@ -1,0 +1,368 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bank container-fluid p-0">
+    <div class=" p-0 m-0">
+        <img src="~/Content/Library/images/loan/bgbank.jpg" width="100%">
+    </div>
+    <div class="text-center mt-2 col tt1 pt-3 te" id="no1">
+        <h2>WHY WE SHOULD CHOOSE AUTOWORLD</h2>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 product-grid3">
+                <div class="text-center">
+                    <h4>CONFERENCE INTEREST</h4>
+                </div>
+                <div class="image-service text-justify ">
+                    <div class="text-center my-1">
+                        <img src="~/Content/Library/images/loan/code.png">
+                    </div>
+                    <p>We respect your time, so we are committed to bringing you the most preferential interest rates and the fastest delivery time in 1 day.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-grid3">
+                <div class="text-center">
+                    <h4>HIGH LOAN LIMIT</h4>
+                </div>
+                <div class="image-service text-justify">
+                    <div class="text-center my-1">
+                        <img src="~/Content/Library/images/loan/CODE3.png">
+                    </div>
+                    <p>Please rest assured when borrowing here, the number of loan months is up to 78 months, the loan limit is up to 1 billion. AutoWorld always wants customers to have the best experience.</p>
+                </div>
+            </div>
+            <div class="col-md-4 product-grid3">
+                <div class="text-center">
+                    <h4>ADVISORY ENTHUSIASM</h4>
+                </div>
+                <div class="image-service text-justify">
+                    <div class="text-center my-1">
+                        <img src="~/Content/Library/images/loan/CODE2.png">
+                    </div>
+                    <p>AutoWorld's consulting team is always ready to help you find the most reasonable loan price. We serve our customers with a mindset that is always ready to meet the needs of our customers.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <div class="text-center ">
+        <h2>
+            <p>
+                AutoWorld corporate loan estimator
+            </p>
+        </h2>
+    </div>
+    <div class="container">
+        <div ng-controller="myController" class="row">
+            <div class="col text-center java">
+                <h4 class="p-3">
+                    Enter the amount you want to borrow<br>
+                </h4>
+                <input class=" m-0  w-35" type="text" min="0" max="1000000000" id="sovay" onchange="tinhlai" required placeholder="input number $" ng-model="money" required>
+                <h4 class="p-3">
+                    Number of months max 78 months
+                </h4>
+                <input type="number" ng-model="months" id="sothang" min="1" max="78" value="0" onchange="tinhlai" required=""> months
+                <h4 class="p-3">
+
+                    corporate interest rate per year<br>
+                    <img class="image10" src="~/Content/Library/images/loan/10.png">
+                </h4>
+            </div>
+            <div class="col text-center  mt-3">
+                <h4>The amount you pay every month is:</h4>
+                <p style="font-size:60px">
+                    @*_{{money * 1.1 / months | currency}}_*@
+
+                </p>
+                <div class="months">
+                    <p style="font-size:70px">
+                        months
+                    </p>
+                </div>
+            </div>
+            <script>
+                var myApp = angular.module("myApp", []);
+                myApp.controller("myController", function ($scope) {
+                    $scope.name = "";
+                });
+            </script>
+        </div>
+    </div>
+</div>
+
+
+<div class="p-3 col-12">
+    <center>
+        <p>
+            <h4>
+                DOCUMENTS NEEDED TO MAKE LOAN RECORDS AT<BR> AUTOWORLD
+            </h4>
+        </p>
+    </center>
+</div>
+<div class="row col-12 text-center mt-3">
+    <div class="col">
+        <img src="~/Content/Library/images/loan/tt1.png">
+        <p>
+            <h5>
+                CMND/ CCCD/ Passport
+            </h5>
+        </p>
+        Valid number, not blurred, unmodified
+    </div>
+    <div class="col mt-2">
+        <img src="~/Content/Library/images/loan/tt2.png">
+        <p>
+            <h5>
+                REGISTRATION BOOK
+            </h5>
+        </p>
+        Can use photocopy (No notarization required)
+    </div>
+    <div class="col p-3">
+        <img src="~/Content/Library/images/loan/tt3.png">
+        <p>
+            <h5>
+                PROOF OF INCOME
+            </h5>
+        </p>
+        Salary statements, salary statements, salary confirmation ... last three months.
+    </div>
+    <div class="col p-3">
+        <img src="~/Content/Library/images/loan/tt4.png">
+        <p>
+            <h5>
+                HĐLĐ/ BHYT
+            </h5>
+        </p>
+        Labor contract and health insurance issued by the company. Must have 1 in 2.
+    </div>
+</div>
+<hr class="badge-warning">
+<div class="text-center">
+    <h3>
+        <p>
+            Outstanding installment car loans by banks
+        </p>
+    </h3>
+</div>
+<!-- ----------------------------bank123-------------------- -->
+<div class="container-fluid mb-2">
+    <div class="row mt-5 text-center">
+        <div class="col-12 col-md-4 p-1">
+            <div class="bank321 pt-3">
+                <div class="title">
+                    <div class="imt">
+                        <img src="~/Content/Library/images/loan/logobank1.png">
+                    </div>
+                    <h5>
+                        Woori bank - car loan donation
+                    </h5>
+
+                    <i class="gift fas fa-gift"></i><span> IR the most preferential market</span>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col bank1">
+                            <b>
+                                interest rate
+                            </b>
+                            <h1 class="text-primary">
+                                7%
+                            </h1>
+                            <b>
+                                year
+                            </b>
+                        </div>
+                        <div class="col">
+                            <b>
+                                Endow
+                            </b>
+                            <h1 class="text-primary">
+                                12
+                            </h1>
+                            <b>
+                                month
+                            </b>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container ml-1 term">
+                    <ul class="text-justify">
+                        <li>
+                            The most favorable interest rate in the market
+                        </li>
+                        <li>
+                            The maximum loan period of 5 years
+                        </li>
+                        <li>
+                            Simple and fast records and procedures
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-information">
+                    <h4 class="p-2">
+                        Contact information
+                    </h4>
+                    <h3>
+                        <p class="m-0 text-danger">
+                            Tell: <a href="tel:+84123456789">0123 456 789</a>
+                        </p>
+                        <p class="m-0 text-danger">
+                            Email: <a href="mailto:aptech@aptech.com">aptech@aptech.com</a>
+                        </p>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------bank2------------------ -->
+        <div class="col-12 col-md-4 p-1">
+            <div class="bank321 pt-3">
+                <div class="title">
+                    <div class="imt">
+                        <img src="~/Content/Library/images/loan/logobank2.png">
+                    </div>
+                    <h5>
+                        BIDV bank - new car home - full of love
+                    </h5>
+                    <i class="gift fas fa-gift"></i><span> Discount 0.3% IR when registering at Topbank.vn</span>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col bank1">
+                            <b>
+                                interest rate
+                            </b>
+                            <h1 class="text-primary">
+                                8%
+                            </h1>
+                            <b>
+                                year
+                            </b>
+                        </div>
+                        <div class="col">
+                            <b>
+                                Endow
+                            </b>
+                            <h1 class="text-primary">
+                                24
+                            </h1>
+                            <b>
+                                month
+                            </b>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container term">
+                    <ul class="text-justify">
+                        <li>
+                            Sponsor up to 80% of the value of the car you intend to buy
+                        </li>
+                        <li>
+                            Financing temporary capital mobilization from relatives
+                        </li>
+                        <li>
+                            Interest rates are extremely low for Thaco models.
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-information">
+                    <h4 class="p-2">
+                        Contact information
+                    </h4>
+                    <h3>
+                        <p class="m-0 text-danger">
+                            Tell: <a href="tel:+84123456789">0123 456 789</a>
+                        </p>
+                        <p class="m-0 text-danger">
+                            Email: <a href="mailto:aptech@aptech.com">aptech@aptech.com</a>
+                        </p>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!-- -----------------------------------bank3------------------ -->
+        <div class="col-12 col-md-4 p-1">
+            <div class="bank321 pt-3">
+                <div class="title">
+                    <div class="imt">
+                        <img src="~/Content/Library/images/loan/logobank3.png">
+                    </div>
+                    <h5 class="mt-2">
+                        Techcombank - loan to buy new cars
+                    </h5>
+                    <i class="gift fas fa-gift"></i><span> Discount 0.4% IR when registering at Topbank.vn</span>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col bank1">
+                            <b>
+                                interest rate
+                            </b>
+                            <h1 class="text-primary">
+                                8.99%
+                            </h1>
+                            <b>
+                                year
+                            </b>
+                        </div>
+                        <div class="col">
+                            <b>
+                                Endow
+                            </b>
+                            <h1 class="text-primary">
+                                12
+                            </h1>
+                            <b>
+                                month
+                            </b>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container term">
+                    <ul class="text-justify">
+                        <li>
+                            Limit for up to 100% of vehicle value if collateral is real estate
+                        </li>
+                        <li>
+                            Car loan for old car up to 8 years
+                        </li>
+                        <li>
+                            Loan term up to 6 years
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-information">
+                    <h4 class="p-2">
+                        Contact information
+                    </h4>
+                    <h3>
+                        <p class="m-0 text-danger">
+                            Tell: <a href="tel:+84123456789">0123 456 789</a>
+                        </p>
+                        <p class=" m-0 text-danger">
+                            Email: <a href="mailto:aptech@aptech.com">aptech@aptech.com</a>
+                        </p>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="~/Content/Library/css/loan.css">
+

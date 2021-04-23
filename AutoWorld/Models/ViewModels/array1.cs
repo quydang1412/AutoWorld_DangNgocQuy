@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace AutoWorld.Models.ViewModels
+namespace AutoWorld.Models
 {
-    public class array
+    public class array1
     {
-        public array()
+        public array1()
         {
 
 
@@ -16,11 +16,12 @@ namespace AutoWorld.Models.ViewModels
 
         public string name { get; set; }
         public double price { get; set; }
-        public string seats { get; set; }
-        public string model { get; set; }
-        public string fuel { get; set; }
-        public string origin { get; set; }
-        public string other { get; set; }
+        public string weight { get; set; }
+        public string petrolTankCapacity { get; set; }
+        public string engineType { get; set; }
+        public string maximumPower { get; set; }
+        public string maximumMoment { get; set; }
+        public string cylinderCapacity { get; set; }
         public string img { get; set; }
         public string img1 { get; set; }
         public string img2 { get; set; }

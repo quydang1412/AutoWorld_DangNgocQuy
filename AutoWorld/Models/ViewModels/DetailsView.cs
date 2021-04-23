@@ -64,6 +64,7 @@ namespace AutoWorld.Models.ViewModels
             }
 
 
+
             string json = product.Description;
             //dynamic ar = JObject.Parse(json);
             array dt = JsonConvert.DeserializeObject<array>(json);
@@ -71,6 +72,8 @@ namespace AutoWorld.Models.ViewModels
             //JavaScriptSerializer js = new JavaScriptSerializer();
             //dynamic ar = js.DeserializeObject(json);
 
+            name = product.Name;
+            price = product.Price;
             seats = dt.seats;
             model = dt.model;
             fuel = dt.fuel;
@@ -86,6 +89,10 @@ namespace AutoWorld.Models.ViewModels
             
 
         }
+
+        public string name { get; set; }
+
+        public double price { get; set; }
 
         public string seats { get; set; }
         public string model { get; set; }

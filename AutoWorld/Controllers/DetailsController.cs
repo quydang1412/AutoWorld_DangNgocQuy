@@ -12,10 +12,10 @@ namespace AutoWorld.Controllers
     {
         AutoWorlDbContext db = new AutoWorlDbContext();
         // GET: Details
-        public ActionResult Index()
-        {
-            return View(Details);
-        }
+        //public ActionResult Index()
+        //{
+        //    return View(Details);
+        //}
 
         //public ActionResult Index(DetailsView model)
         //{
@@ -33,13 +33,34 @@ namespace AutoWorld.Controllers
                 return HttpNotFound();
             }
 
-            Details = new DetailsView(product);
+            if (product.Content.Equals("car",StringComparison.OrdinalIgnoreCase))
+            {
+                Details = new DetailsView(product);
 
-            return View("Index");
+                return View(Details);
+            }else if (product.Content.Equals("motor",StringComparison.OrdinalIgnoreCase)){
+                Details1 = new DetailsView1(product);
+
+                return View("DetailProductMotor", Details1);
+            }
+            return View();
+            
         }
 
+        //public ActionResult DetailProductMotor(int id)
+        //{
+        //    var product = db.Products.Find(id);
+        //    if (product == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
 
+        //    Details1 = new DetailsView1(product);
+
+        //    return View(Details1);
+        //}
 
         public DetailsView Details { get; set; }
+        public DetailsView1 Details1 { get; set; }
     }
 }

@@ -1,0 +1,125 @@
+﻿@model AutoWorld.Models.ViewModels.DetailsView1
+@{
+    ViewBag.Title = "DetailProductMotor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+
+
+    <!-- Carousel -->
+    <div id="slides" class="carousel slide " data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="
+					active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+            <li data-target="#slides" data-slide-to="3"></li>
+            <li data-target="#slides" data-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/Content/Library/images/carousel4.jpg" alt="">
+                <div class=" carousel-caption d-none d-md-block">
+                    <h1>Welcome to AutoWorld</h1>
+                    <p class="slogan">The Power of Dreams</p>
+                    <!-- <p>
+                        <a href="products.html" class="btn btn-danger">All vehicles</a>
+                    </p> -->
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel0.jpg" alt="">
+
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel1.jpg" alt="">
+
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel2.jpg" alt="">
+
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel3.jpg" alt="">
+
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon text-danger"></span>
+        </a>
+        <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon text-danger"></span>
+        </a>
+    </div>
+    <!-- /Carousel -->
+
+    <div class="container mt-4 mb-4">
+
+        <div class="detail2 " ng-repeat="car in cars| filter:filterId">
+            <div class="row ct">
+                <div class="information my-auto col-5 col-md-4">
+                    <h3>@Html.DisplayFor(model => model.name)</h3>
+                    <h5>
+                        Price: @Html.DisplayFor(model => model.price)<h5>
+                            <p>
+                                - Weight: @Html.DisplayFor(model => model.weight)<br>
+                                - Petrol Tank Capacity: @Html.DisplayFor(model => model.petrolTankCapacity)<br>
+                                - Engine Type: @Html.DisplayFor(model => model.engineType)<br>
+                                - Maximum Power: @Html.DisplayFor(model => model.maximumPower)<br>
+                                - Maximum Moment: @Html.DisplayFor(model => model.maximumMoment)<br>
+                                - Cylinder Capacity: @Html.DisplayFor(model => model.cylinderCapacity)
+                            </p>
+
+                            <a href="#slides" class="btn btn-danger mt-1">Sign up for drive</a>
+                            <a href="compare.html?{{car.id}}" class="btn btn-danger mt-1">Compare</a>
+                </div>
+                <div class="col-7 col-md-8 my-auto">
+                    <img src="~/Content/Library/@Html.DisplayFor(model => model.img)" class="w-100">
+                </div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="title1 row">
+                    <div class="col-12">
+                        <h1>Highlights</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-5 my-auto">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img1)" alt="" class="w-100 ">
+                    </div>
+                    <div class="cap1 col-7 pt-3">
+                        <h4>Exterior</h4>
+                        <hr>
+                        <h1>Impressive appearance</h1>
+                        <p>AutoWorld always guides customers with excellent products and quality</p>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="gla col-6 ">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img2)" class="w-100">
+                    </div>
+                    <div class="gla col-6 ">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img3)" class="w-100">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="gla col-6 ">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img4)" class="w-100">
+                    </div>
+                    <div class="gla col-6 ">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img5)" class="w-100">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</main>
+<link rel="stylesheet" href="~/Content/Library/css/details.css">
+

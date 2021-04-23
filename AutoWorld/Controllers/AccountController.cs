@@ -39,7 +39,7 @@ namespace AutoWorld.Controllers
                 {
                     return Redirect(returnUrl);
                 }
-                return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
+                return RedirectToAction("DashBoard", "DashBoard", new { area = "Admin" });
 
             }
 

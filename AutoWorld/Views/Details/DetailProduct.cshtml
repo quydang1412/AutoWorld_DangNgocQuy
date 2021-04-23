@@ -62,22 +62,22 @@
         <div class="detail2 " ng-repeat="car in cars| filter:filterId">
             <div class="row ct">
                 <div class="information my-auto col-5 col-md-4">
-                    @*<h3>@Html.DisplayNameFor(model => model.)</h3>*@
+                    <h3>@Html.DisplayFor(model => model.name)</h3>
                     <h5>
-                        Price: {{car.price}}<h5>
+                        Price: @Html.DisplayFor(model => model.price)<h5>
                             <p>
-                                - Seats: @Html.DisplayNameFor(model => model.seats)<br>
-                                - Model: @Html.DisplayNameFor(model => model.model)<br>
-                                - Fuel: @Html.DisplayNameFor(model => model.fuel)<br>
-                                - Origin: @Html.DisplayNameFor(model => model.origin)<br>
-                                - Other: @Html.DisplayNameFor(model => model.other)
+                                - Seats: @Html.DisplayFor(model => model.seats)<br>
+                                - Model: @Html.DisplayFor(model => model.model)<br>
+                                - Fuel: @Html.DisplayFor(model => model.fuel)<br>
+                                - Origin: @Html.DisplayFor(model => model.origin)<br>
+                                - Other: @Html.DisplayFor(model => model.other)
                             </p>
 
                             <a href="#slides" class="btn btn-danger mt-1">Sign up for drive</a>
                             <a href="compare.html?{{car.id}}" class="btn btn-danger mt-1">Compare</a>
-                </div>
+</div>
                 <div class="col-7 col-md-8 my-auto">
-                    <img ng-src="{{car.img}}" class="w-100">
+                    <img src="~/Content/Library/@Html.DisplayFor(model => model.img)" class="w-100">
                 </div>
             </div>
             <div class="container-fluid mt-4">
@@ -89,7 +89,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-5 my-auto">
-                        <img ng-src="{{car.img1}}" alt="" class="w-100 ">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img1)" alt="" class="w-100 ">
                     </div>
                     <div class="cap1 col-7 pt-3">
                         <h4>Exterior</h4>
@@ -100,18 +100,18 @@
                 </div>
                 <div class="row mt-2">
                     <div class="gla col-6 ">
-                        <img ng-src="{{car.img2}}" class="w-100">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img2)" class="w-100">
                     </div>
                     <div class="gla col-6 ">
-                        <img ng-src="{{car.img3}}" class="w-100">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img3)" class="w-100">
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="gla col-6 ">
-                        <img ng-src="{{car.img4}}" class="w-100">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img4)" class="w-100">
                     </div>
                     <div class="gla col-6 ">
-                        <img ng-src="{{car.img5}}" class="w-100">
+                        <img src="~/Content/Library/@Html.DisplayFor(model => model.img5)" class="w-100">
                     </div>
                 </div>
 

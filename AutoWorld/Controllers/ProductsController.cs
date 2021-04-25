@@ -22,6 +22,12 @@ namespace AutoWorld.Controllers
             return View(products.ToList());
         }
 
+        public ActionResult SearchProduct()
+        {
+            var products = db.Products.Include(p => p.Categories).Include(p => p.Location);
+            return View("SearchProduct",products.ToList());
+        }
+
         [HttpPost]
         public ActionResult Search()
         {

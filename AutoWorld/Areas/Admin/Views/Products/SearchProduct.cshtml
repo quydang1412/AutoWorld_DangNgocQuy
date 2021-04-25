@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AutoWorld.Models.Products>
+@{
+    ViewBag.Title = "SearchProduct";
+    Layout = "~/Areas/Admin/Views/Shared/_ProductLayout.cshtml";
+}
+
+<div class="container container-fluid mt-3 col">
+    <div class="filterDiv col all no1 no2 no3 no4 Toyota Audi Mercedes">
+        <h1>Cars</h1>
+        <hr>
+    </div>
+    <!-- --line1-- -->
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <!-- Product  -->
+
+            <div class=" col-sm-6 col-lg-4 product-grid1">
+                <div class="image">
+                    <a href="details.html?idsToTake=xe01" title="">
+                        <img src="~/Content/Library/@Html.DisplayFor(modelItem => item.Image)" alt="">
+                    </a>
+                    <h4 class="text-center">@Html.DisplayFor(modelItem => item.Name)</h4>
+                    <h5 class="text-center">Price: $@Html.DisplayFor(modelItem => item.Price)</h5>
+                    @*<h5 class="text-center">@Html.DisplayFor(modelItem => item.description) seat</h5>*@
+                    <a href="@Url.Action("DetailProduct","Details",new { id = item.Id })" class=" buy btn btn-danger btn-lg ">Details</a>
+
+                    @{
+                        //JsonConvert.SerializeObject
+                        //Convert.
+                    }
+                </div>
+            </div>
+            <!-- ./Product -->
+        }
+
+    </div>
+    <!-- line8 -->
+</div>
+

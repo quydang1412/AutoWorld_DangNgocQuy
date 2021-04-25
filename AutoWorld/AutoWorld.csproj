@@ -645,6 +645,8 @@
     <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Users\_UserForm.cshtml" />
     <Content Include="Areas\Admin\Views\DashBoard\DashBoard.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_ProductLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\SearchProduct.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

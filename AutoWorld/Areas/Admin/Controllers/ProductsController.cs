@@ -15,7 +15,7 @@ namespace AutoWorld.Areas.Admin.Controllers
     [CustomActionFilter]
     [ExceptionHandlerFilter]
 
-    public class ProductsController : Controller
+    public class ProductsController : BaseController
     {
         private AutoWorlDbContext db = new AutoWorlDbContext();
 
@@ -115,6 +115,7 @@ namespace AutoWorld.Areas.Admin.Controllers
             {
                 db.Products.Add(products);
                 db.SaveChanges();
+                SetSuccessNotification();
                 return RedirectToAction("Index");
             }
 
@@ -151,6 +152,7 @@ namespace AutoWorld.Areas.Admin.Controllers
             {
                 db.Entry(products).State = EntityState.Modified;
                 db.SaveChanges();
+                SetSuccessNotification();
                 return RedirectToAction("Index");
             }
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", products.CategoryId);
@@ -181,6 +183,7 @@ namespace AutoWorld.Areas.Admin.Controllers
             Products products = db.Products.Find(id);
             db.Products.Remove(products);
             db.SaveChanges();
+            SetSuccessNotification();
             return RedirectToAction("Index");
         }
 

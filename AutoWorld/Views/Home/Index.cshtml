@@ -1,31 +1,336 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<main>
+    <!-- Carousel -->
+    <div id="slides" class="carousel slide " data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="
+					active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+            <li data-target="#slides" data-slide-to="3"></li>
+            <li data-target="#slides" data-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/Content/Library/images/carousel4.jpg" alt="">
+                <div class=" carousel-caption d-none d-md-block">
+                    <h1>Welcome to AutoWorld</h1>
+                    <p class="slogan">The Power of Dreams</p>
+                    <!-- <p>
+                        <a href="products.html" class="btn btn-danger">All vehicles</a>
+                    </p> -->
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel0.jpg" alt="">
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel1.jpg" alt="">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel2.jpg" alt="">
+
+            </div>
+            <div class="carousel-item ">
+                <img src="~/Content/Library/images/carousel3.jpg" alt="">
+
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon text-danger"></span>
+        </a>
+        <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon text-danger"></span>
+        </a>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <!-- /Carousel -->
+    <!-- jumbotron -->
+
+    <div class="cover container-fluid jumbotron mt-4 border-0">
+        <div class="text-center ">
+            <h1>A car for all styles</h1>
+            <p class="sha">See the full range of vehicles and find the one that works best for you</p>
+            <p>
+                <a href="products.html" class="btn btn-danger">All vehicles</a>
+            </p>
+        </div>
+
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <!-- jumbotron -->
+    <!-- products -->
+    <div class="container-fluid mt-3 col px-4" id="products">
+        <div class="col tt1">
+            <h1>Lastest Cars</h1>
+        </div>
+        <hr>
+        <div class="row">
+            <!-- Product  -->
+            <div class="col-12 col-sm-6 col-lg-3 product-grid1 mt-3 p-0">
+                <div class="image p-0">
+                    <div class="im1 my-auto">
+                        <img src="~/Content/Library/images/car/car1.png" alt="" class="w-100">
+                    </div>
+                    <h4 class="text-center">Toyota Fortuner</h4>
+                    <h5 class="text-center">$46,500</h5>
+                    <h5 class="text-center">7 seat</h5>
+                    <a href="details.html?idsToTake=xe01" class=" buy btn btn-danger btn-lg">Details</a>
+
+                </div>
+            </div>
+            <!-- ./Product -->
+            <!-- Product  -->
+            <div class="col-12 col-sm-6 col-lg-3 product-grid1 mt-3 p-0">
+                <div class="image p-0">
+                    <div class="im1 my-auto">
+                        <img src="~/Content/Library/images/car/car6.png" alt="" class="w-100">
+                    </div>
+                    <h4 class="text-center">Audi A7</h4>
+                    <h5 class="text-center">$168,250</h5>
+                    <h5 class="text-center">4 seat</h5>
+                    <a href="details.html?idsToTake=xe06" class=" buy btn btn-danger btn-lg ">Details</a>
+
+                </div>
+            </div>
+            <!-- ./Product -->
+            <!-- Product  -->
+            <div class="col-12 col-sm-6 col-lg-3 product-grid1 mt-3 p-0">
+                <div class="image p-0">
+                    <div class="im1 my-auto">
+                        <img src="~/Content/Library/images/car/car9.png" alt="" class="w-100">
+                    </div>
+                    <h4 class="text-center">Audi Q7</h4>
+                    <h5 class="text-center">$147,802</h5>
+                    <h5 class="text-center">7 seat</h5>
+                    <a href="details.html?idsToTake=xe09" class=" buy btn btn-danger btn-lg ">Details</a>
+
+                </div>
+            </div>
+            <!-- ./Product -->
+            <!-- Product  -->
+            <div class="col-12 col-sm-6 col-lg-3 product-grid1 mt-3 p-0">
+                <div class="image p-0">
+                    <div class="im1 my-auto">
+                        <img src="~/Content/Library/images/car/car14.png" alt="" class="w-100 my-auto">
+                    </div>
+                    <h4 class="text-center">Mercedes-Benz GLE SUV</h4>
+                    <h5 class="text-center">$188,401</h5>
+                    <h5 class="text-center">7 seat</h5>
+                    <a href="details.html?idsToTake=xe14" class=" buy btn btn-danger btn-lg ">Details</a>
+
+                </div>
+            </div>
+            <!-- ./Product -->
+
+        </div>
+        <div class="row mt-2">
+            <!-- Product  -->
+            <div class="col-12 col-sm-6 col-lg-3 product-grid2 mt-3 p-0">
+                <div class="image p-0">
+                    <div class="im2 my-auto">
+                        <img src="~/Content/Library/images/moto/moto1.png" alt="" class="w-100">
+                    </div>
+                    <h4 class="text-center">Honda Air Blade 125/150</h4>
+                    <h5 class="text-center">$1,800</h5>
+                    <h5 class="text-center">Dry weight: 111/113kg</h5>
+                    <a href="details.html?idsToTake=xe16" class=" buy btn btn-danger btn-lg">Details</a>
+
+                </div>
+            </div>
+            <!-- ./Product -->
+            <!-- Product  -->
+            <div class="col-12 col-sm-6 col-lg-3 product-grid2 mt-3 p-0">
+                <div class="image p-0">
+                    <div class="im2 my-auto">
+                        <img src="~/Content/Library/images/moto/moto2.png" alt="" class="w-100">
+                    </div>
+                    <h4 class="text-center">Honda Lead 125Fi</h4>
+                    <h5 class="text-center">$1,800</h5>
+                    <h5 class="text-center">Dry weight: 113kg</h5>
+                    <a href="details.html?idsToTake=xe17" class=" buy btn btn-danger btn-lg">Details</a>
+
+                </div>
+            </div>
+            <!-- ./Product -->
+            <!-- Product  -->
+            <div class="col-12 col-sm-6 col-lg-3 product-grid2 mt-3 p-0">
+                <div class="image p-0">
+                    <div class="im2 my-auto">
+                        <img src="~/Content/Library/images/moto/moto6.png" alt="" class="w-100">
+                    </div>
+                    <h4 class="text-center">Yamaha Exciter 150</h4>
+                    <h5 class="text-center">$2,100</h5>
+                    <h5 class="text-center">Dry weight: 117kg</h5>
+                    <a href="details.html?idsToTake=xe21" class=" buy btn btn-danger btn-lg">Details</a>
+
+                </div>
+            </div>
+            <!-- ./Product -->
+            <div class="col-12 col-sm-6 col-lg-3 product-grid2 mt-3 p-0">
+                <div class="image p-0">
+                    <div class="im2 my-auto">
+                        <img src="~/Content/Library/images/moto/moto7.png" alt="" class="w-100">
+                    </div>
+                    <h4 class="text-center">Yamaha TFX 150</h4>
+                    <h5 class="text-center">$3,100</h5>
+                    <h5 class="text-center">Dry weight: 135kg</h5>
+                    <a href="details.html?idsToTake=xe22" class=" buy btn btn-danger btn-lg">Details</a>
+
+                </div>
+            </div>
+            <!-- ./Product -->
+
+        </div>
     </div>
-</div>
+    <!-- /products -->
+    <!-- gallery-->
+    <div class="container-fluid my-2">
+        <div class="row px-1">
+            <div class="gla col-6">
+                <!-- <a href="images/gallery1.jpg"> -->
+                <img src="~/Content/Library/images/gallery1.jpg" class="w-100">
+                <!-- 	</a> -->
+            </div>
+            <div class="gla col-6">
+                <!-- <a href="images/gallery2.jpg"> -->
+                <img src="~/Content/Library/images/gallery2.jpg" class="w-100">
+                <!-- </a> -->
+            </div>
+        </div>
+        <div class="row px-1">
+            <div class="gla col-6">
+                <!-- <a href="images/gallery3.jpg"> -->
+                <img src="~/Content/Library/images/gallery3.jpg" class="w-100">
+                <!-- </a> -->
+            </div>
+            <div class="gla col-6">
+                <!-- <a href="images/gallery4.jpg"> -->
+                <img src="~/Content/Library/images/gallery4.jpg" class="w-100">
+                <!-- </a> -->
+            </div>
+        </div>
+    </div>
+    <!-- /gallery-->
+    <!-- services -->
+    <div class="service container-fluid bg-white ">
+        <div class="col tt1 pt-3">
+            <h1>Services</h1>
+        </div>
+        <hr>
+        <div class="row">
+            <!-- option  -->
+            <div class="col-md-4 product-grid3">
+                <div class="text-center">
+                    <h4>WARRANTY POLICY</h4>
+                </div>
+                <div class="image-service text-center">
+                    <a href="services.html?#no1" title="">
+                        <img src="~/Content/Library/images/home-service-1.png" alt="">
+                    </a>
+                    <p>The policy of bringing necessary repairs, using new or recycled parts to the Customer's vehicle is covered under warranty.</p>
+                </div>
+            </div>
+            <!-- /option  -->
+            <!-- option  -->
+            <div class="col-md-4 product-grid3">
+                <div class="text-center">
+                    <h4>MAINTENANCE SERVICES</h4>
+                </div>
+                <div class="image-service text-center">
+                    <a href="services.html?#no2" title="">
+                        <img src="~/Content/Library/images/home-service-2.png" alt="">
+                    </a>
+                    <p>Periodic inspection and maintenance service to ensure that the customer's vehicle is always operated effectively.</p>
+                </div>
+            </div>
+            <!-- /option  -->
+            <!-- option  -->
+            <div class="col-md-4 product-grid3">
+                <div class="text-center">
+                    <h4>REPAIR SERVICES</h4>
+                </div>
+                <div class="image-service text-center">
+                    <a href="services.html?#no3" title="">
+                        <img src="~/Content/Library/images/home-service-3.png" alt="">
+                    </a>
+                    <p>In addition to maintenance and repair services for unusual phenomena on the vehicle, AutoWorld also provides repair services for collision damage that a Customer's vehicle encounters during its use.</p>
+                </div>
+            </div>
+            <!-- /option  -->
+
+        </div>
+    </div>
+    <!-- /services -->
+    <!-- loan -->
+    <div class="loan container-fluid bg-white ">
+        <div class="col tt1 pt-3">
+            <h1>Loan</h1>
+        </div>
+        <hr>
+        <div class="row">
+            <!-- option  -->
+            <div class="col-md-4 product-grid3-loan">
+                <div class="text-center">
+                    <h4>CONFERENCE INTEREST</h4>
+                </div>
+                <div class="image-loan text-center">
+                    <a href="loan.html?#no1" title="">
+                        <img src="~/Content/Library/images/loan/code.png" alt="">
+                    </a>
+                    <p>We respect your time, so we are committed to bringing you the most preferential interest rates and the fastest delivery time in 1 day.</p>
+                </div>
+            </div>
+            <!-- /option  -->
+            <!-- option  -->
+            <div class="col-md-4 product-grid3-loan">
+                <div class="text-center">
+                    <h4>HIGH LOAN LIMIT</h4>
+                </div>
+                <div class="image-loan text-center">
+                    <a href="loan.html?#no1" title="">
+                        <img src="~/Content/Library/images/loan/CODE3.png" alt="">
+                    </a>
+                    <p>Please rest assured when borrowing here, the number of loan months is up to 78 months, the loan limit is up to 1 billion. AutoWorld always wants customers to have the best experience.</p>
+                </div>
+            </div>
+            <!-- /option  -->
+            <!-- option  -->
+            <div class="col-md-4 product-grid3-loan">
+                <div class="text-center">
+                    <h4>ADVISORY ENTHUSIASM</h4>
+                </div>
+                <div class="image-loan text-center">
+                    <a href="loan.html?#no1" title="">
+                        <img src="~/Content/Library/images/loan/CODE2.png" alt="">
+                    </a>
+                    <p>AutoWorld's consulting team is always ready to help you find the most reasonable loan price. We serve our customers with a mindset that is always ready to meet the needs of our customers.</p>
+                </div>
+            </div>
+            <!-- /option  -->
+
+        </div>
+    </div>
+    <!-- /loan-->
+    <!-- contact -->
+    <div id="contact" class="container-fluid padding social-media pt-3">
+        <div class="col tt1">
+            <h1>Contact Us</h1>
+        </div>
+        <hr>
+        <div class="content">
+            <form action="success.html">
+                <input type="text" name="name" id="name" required placeholder="Your Name">
+                <input type="email" name="mail" id="mail" required placeholder="Your Email">
+                <input type="tel" name="tel" id="tel" required placeholder="Phone Number">
+                <textarea name="mess" id="mess" rows="7" placeholder="Your Message Here..."></textarea>
+                <button type="submit">Send<i class="fa fa-paper-plane"></i></button>
+            </form>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15305.318394064881!2d107.5810189!3d16.4588401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4eb6bafb31d4c653!2zSHXhur8gQXB0ZWNo!5e0!3m2!1svi!2s!4v1600697484418!5m2!1svi!2s" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- /contact -->
+</main>

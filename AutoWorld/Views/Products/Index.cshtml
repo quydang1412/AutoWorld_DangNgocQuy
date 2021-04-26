@@ -188,6 +188,8 @@
                         <h5 class="text-center">Price: $@Html.DisplayFor(modelItem => item.Price)</h5>
                         @*<h5 class="text-center">@Html.DisplayFor(modelItem => item.description) seat</h5>*@
                         <a href="@Url.Action("DetailProduct","Details",new { id = item.Id })" class=" buy btn btn-danger btn-lg ">Details</a>
+                        <a href="@Url.Action("AddToCart","Cart",new { id = item.Id })" class=" buy btn btn-danger btn-lg ml-3">Add Cart</a>
+                        @*<a>@Html.ActionLink("Add to Cart", "AddToCart", new { controller = "Cart", id = item.Id }, new { class=" buy btn btn-danger btn-lg ")</a>*@
 
                         @{
                             //JsonConvert.SerializeObject

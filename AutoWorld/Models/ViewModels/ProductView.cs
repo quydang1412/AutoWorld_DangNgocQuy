@@ -53,5 +53,7 @@ namespace AutoWorld.Models.ViewModels
 		[Display(Name = "Location")]
 		public long? LocationId { get; set; }
 
+		//public HttpPostedFileBase UploadFile { get; set; }
+
 	}
 }

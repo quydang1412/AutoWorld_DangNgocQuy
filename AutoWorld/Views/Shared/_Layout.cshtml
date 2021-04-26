@@ -50,10 +50,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     @*<link href="~/Content/Library/" rel="stylesheet" />*@
 
-    @*@Styles.Render("~/Content/Library/css")
+    @Styles.Render("~/Content/Library/css")
         @Styles.Render("~/Content/Library/jquery")
         @Styles.Render("~/Content/Library/js")
-        @Scripts.Render("~/bundles/modernizr")*@
+        @Scripts.Render("~/bundles/modernizr")
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="~/Content/Library/libs/bootstrap/css/bootstrap.min.css">
     <!-- Fontawesome  -->
@@ -74,7 +74,7 @@
             <a href="HomePage/Index" title="">
                 <img src="~/Content/Library/images/logo.png" alt="" height="60px">
             </a>
-            <a href="HomePage/Index" title="Welcome to AutoWorld" class="navbar-brand" id="caption"><span id="auto">Auto</span><span id="world">World</span></a>
+            <a href="@Url.Action("Index","HomePage")" title="Welcome to AutoWorld" class="navbar-brand" id="caption"><span id="auto">Auto</span><span id="world">World</span></a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon">
                 </span>
@@ -82,32 +82,32 @@
             <div class=" collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a href="/HomePage/Index" title="" class="nav-link active">Home</a>
+                        <a href="@Url.Action("Index","HomePage")" title="" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/About/Index" title="" class="nav-link">About</a>
+                        <a href="@Url.Action("Index","About")" title="" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Products/Index" title="" class="nav-link">Products</a>
+                        <a href="@Url.Action("Index","Products")" title="" class="nav-link">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Services/Index" title="" class="nav-link">Services</a>
+                        <a href="@Url.Action("Index","Services")" title="" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Loan/Index" title="" class="nav-link">Loan</a>
+                        <a href="@Url.Action("Index","Loan")" title="" class="nav-link">Loan</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Contact/Index" title="" class="nav-link">Contact</a>
+                        <a href="@Url.Action("Index","Contact")" title="" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Sitemap/Index" title="" class="nav-link">Sitemap</a>
+                        <a href="@Url.Action("Index","Sitemap")" title="" class="nav-link">Sitemap</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Account/Login" title="" class="nav-link">Login</a>
+                        <a href="@Url.Action("Login","Account")" title="" class="nav-link">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Cart/Index" title="" class="nav-link">Cart <span class="badge badge-danger">@AutoWorld.Common.DataUtils.GetNumberOfCartItems(Session["Cart"])</span></a>
-    
+                        <a href="@Url.Action("Index","Cart")" title="" class="nav-link">Cart <span class="badge badge-danger">@AutoWorld.Common.DataUtils.GetNumberOfCartItems(Session["Cart"])</span></a>
+
                     </li>
 
                 </ul>
@@ -119,6 +119,7 @@
     </header>
     <!-- /header -->
     <!-- main -->
+    @{Html.RenderPartial("_Notification"); }
     @RenderBody()
     <!-- /main -->
     <!-- footer	 -->

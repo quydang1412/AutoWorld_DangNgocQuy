@@ -31,6 +31,9 @@ namespace AutoWorld
                       "~/Content/site.css"));
             bundles.Add(new ScriptBundle("~/bundles/Library/css").Include(
                         "~/Content/Library/libs/bootstrap/css/bootstrap.min.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/ckeditor").Include(
+                       "~/Scripts/ckeditor/ckeditor.js"));
         }
     }
 }

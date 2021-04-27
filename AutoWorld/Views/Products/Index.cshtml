@@ -181,7 +181,7 @@
 
                 <div class=" col-sm-6 col-lg-4 product-grid1">
                     <div class="image">
-                        <a href="details.html?idsToTake=xe01" title="">
+                        <a href="@Url.Action("DetailProduct","Details",new { id = item.Id })" title="">
                             <img src="~/Content/Library/@Html.DisplayFor(modelItem => item.Image)" alt="">
                         </a>
                         <h4 class="text-center">@Html.DisplayFor(modelItem => item.Name)</h4>

@@ -33,6 +33,13 @@ namespace AutoWorld.Controllers
                 return HttpNotFound();
             }
 
+            if(product.Content == null)
+            {
+                Details = new DetailsView(product);
+
+                return View(Details);
+            }
+
             if (product.Content.Equals("car",StringComparison.OrdinalIgnoreCase))
             {
                 Details = new DetailsView(product);
@@ -43,6 +50,8 @@ namespace AutoWorld.Controllers
 
                 return View("DetailProductMotor", Details1);
             }
+            
+            
             return View();
             
         }

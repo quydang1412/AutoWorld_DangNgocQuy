@@ -236,6 +236,7 @@
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\SitemapController.cs" />
+    <Compile Include="Controllers\SuccessController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1044,6 +1045,7 @@
     <Content Include="Views\Shared\_Notification.cshtml" />
     <Content Include="Views\Shared\NotFound.cshtml" />
     <Content Include="Views\Details\DetailProductMotor.cshtml" />
+    <Content Include="Views\Success\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

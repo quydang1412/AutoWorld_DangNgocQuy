@@ -11,21 +11,19 @@ namespace AutoWorld.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Accounts()
         {
-            //Customers = new HashSet<Customers>();
-            //Users = new HashSet<Users>();
+            Customers = new HashSet<Customers>();
+            Users = new HashSet<Users>();
         }
 
         public long Id { get; set; }
 
         [Required]
-        [MinLength(5)]
         public string LoginName { get; set; }
 
         [Required]
         public string Password { get; set; }
 
         [Required]
-        [RegularExpression("^\\w+@\\w+\\.\\w+$")]
         public string Email { get; set; }
 
         public short Locked { get; set; }

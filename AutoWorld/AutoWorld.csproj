@@ -246,17 +246,18 @@
     <Compile Include="Migrations\202104191217587_AfterModifyLocation.Designer.cs">
       <DependentUpon>202104191217587_AfterModifyLocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108270857259_Quy.cs" />
+    <Compile Include="Migrations\202108270857259_Quy.Designer.cs">
+      <DependentUpon>202108270857259_Quy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accounts.cs" />
-    <Compile Include="Models\ViewModels\array1.cs" />
     <Compile Include="Models\AutoWorlDbContext.cs" />
     <Compile Include="Models\Cars.cs" />
     <Compile Include="Models\Categories.cs" />
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Coupons.cs" />
     <Compile Include="Models\Customers.cs" />
-    <Compile Include="Models\Enums\OrderStatus.cs" />
-    <Compile Include="Models\Enums\PriceType.cs" />
-    <Compile Include="Models\Enums\PublishStatus.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Motos.cs" />
     <Compile Include="Models\OrderDetails.cs" />
@@ -264,6 +265,10 @@
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\ViewModels\array1.cs" />
+    <Compile Include="Models\Enums\OrderStatus.cs" />
+    <Compile Include="Models\Enums\PriceType.cs" />
+    <Compile Include="Models\Enums\PublishStatus.cs" />
     <Compile Include="Models\ViewModels\array.cs" />
     <Compile Include="Models\ViewModels\CartItem.cs" />
     <Compile Include="Models\ViewModels\ContactView.cs" />
@@ -1067,6 +1072,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104191217587_AfterModifyLocation.resx">
       <DependentUpon>202104191217587_AfterModifyLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108270857259_Quy.resx">
+      <DependentUpon>202108270857259_Quy.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -3,15 +3,15 @@
         contact.registerEvents();
     },
     registerEvents: function () {
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var tel = $('#tel').val();
-        var mess = $('#mess').val();
-        
-
+ 
         $('#btnContact').off('click').on('click', function () {
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var tel = $('#tel').val();
+            var mess = $('#mess').val();
+
             $.ajax({
-                url: 'HomePage/SaveMessage',
+                url: '/HomePage/SubmitContact',
                 type: 'POST',
                 data: {
                     name: name,
@@ -30,3 +30,4 @@
         });
     }
 }
+contact.init();

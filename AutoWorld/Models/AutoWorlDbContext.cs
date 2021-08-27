@@ -8,13 +8,15 @@ namespace AutoWorld.Models
     public partial class AutoWorlDbContext : DbContext
     {
         public AutoWorlDbContext()
-            : base("auto_world")
+            : base("name=Auto_World")
         {
         }
 
+        
         public virtual DbSet<Accounts> Accounts { get; set; }
         public virtual DbSet<Cars> Cars { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
+        public virtual DbSet<Contact> Contact { get; set; }
         public virtual DbSet<Coupons> Coupons { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
         public virtual DbSet<Location> Location { get; set; }

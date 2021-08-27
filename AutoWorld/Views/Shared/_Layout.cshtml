@@ -15,7 +15,8 @@
     <script type="text/javascript" src="~/Content/Library/libs/font-awesome/js/all.js"></script>
     
     <!-- Optional JavaScript -->
-    <script type="text/javascript" src="~/Content/Library/libs/jquery/jquery-3.5.1.slim.js"></script>
+    @*<script type="text/javascript" src="~/Content/Library/libs/jquery/jquery-3.5.1.slim.js"></script>*@
+    <script type="text/javascript" src="~/Content/Library/libs/jquery/jquery-3.6.0.js"></script>
     <script src="~/Content/Library/libs/jquery/popper_1.12.9.min.js"></script>
     <script type="text/javascript" src="~/Content/Library/libs/bootstrap/js/bootstrap.min.js"></script>
     
@@ -138,9 +139,9 @@
     </footer>
     <!-- /footer -->
 
-    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/Library")
+    @Scripts.Render("~/bundles/Library")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>

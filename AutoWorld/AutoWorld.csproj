@@ -234,6 +234,7 @@
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\SitemapController.cs" />
     <Compile Include="Controllers\SuccessController.cs" />
+    <Compile Include="DAO\ContactDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -265,6 +266,7 @@
     <Compile Include="Models\Users.cs" />
     <Compile Include="Models\ViewModels\array.cs" />
     <Compile Include="Models\ViewModels\CartItem.cs" />
+    <Compile Include="Models\ViewModels\ContactView.cs" />
     <Compile Include="Models\ViewModels\DetailsView.cs" />
     <Compile Include="Models\ViewModels\DetailsView1.cs" />
     <Compile Include="Models\ViewModels\LoginView.cs" />
@@ -276,6 +278,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
+    <Content Include="Ajax\Contact.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

@@ -13,5 +13,12 @@ namespace AutoWorld.Controllers
         {
             return View();
         }
+
+        public JsonResult SubmitContact(string name, string email, string phone, string message)
+        {
+
+
+            return { };
+        }
     }
 }

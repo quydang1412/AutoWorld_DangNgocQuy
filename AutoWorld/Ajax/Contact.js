@@ -22,7 +22,7 @@
                 dataType: "json",
                 success: function (res) {
                     if (res.status) {
-                        alert("gui thanh cong");
+                        //alert("gui thanh cong");
                     }
                 }
 

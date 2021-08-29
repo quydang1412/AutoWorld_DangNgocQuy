@@ -606,6 +606,7 @@
     <Content Include="Content\Library\libs\jquery\popper_1.16.1.min.js" />
     <Content Include="Content\Library\scripts\compare.js" />
     <Content Include="Content\Library\scripts\detail.js" />
+    <Content Include="Content\Library\scripts\home.js" />
     <Content Include="Content\Library\scripts\products.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

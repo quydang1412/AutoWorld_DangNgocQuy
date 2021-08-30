@@ -23,13 +23,16 @@ namespace AutoWorld
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+                      "~/Content/Library/libs/font-awesome/js/all.js",
+                      "~/Content/Library/libs/jquery/jquery-3.6.0.js",
+                      "~/Content/Library/libs/jquery/popper_1.12.9.min.js",
+                      "~/Content/Library/libs/bootstrap/js/bootstrap.min.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
-            bundles.Add(new ScriptBundle("~/bundles/Library/css").Include(
+            //bundles.Add(new StyleBundle("~/Content/css").Include(
+            //          "~/Content/bootstrap.css",
+            //          "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/bundles/Library/css").Include(
                         "~/Content/Library/libs/bootstrap/css/bootstrap.min.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/ckeditor").Include(

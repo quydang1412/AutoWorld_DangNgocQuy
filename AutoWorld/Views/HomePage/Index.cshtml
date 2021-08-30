@@ -325,6 +325,15 @@
         </div>
     </div>
     <!-- /loan-->
+    @*@{Html.RenderPartial("_Notification"); }*@
+
+    @if (TempData["AlertMessage"] != null)
+    {
+
+        <div class="alert @TempData["AlertType"] sticky-top " role="alert" id="AlertBox">
+            @TempData["AlertMessage"]
+        </div>
+    }
     <!-- contact -->
     <div id="contact" class="container-fluid padding social-media pt-3">
         <div class="col tt1">
@@ -348,10 +357,10 @@
                 <div class="form-group">
                     @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @id = "mess", @required = true, @placeholder = "Your Message Here..." } })
                 </div>
-                
+
                 <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <button type="submit" id="btnContact" value="Send">Send<i class="fa fa-paper-plane"></i></button>
+                    <div>
+                        <button type="submit" id="btnContact">Send<i class="fa fa-paper-plane"></i></button>
                         @*<input type="submit" id="btnContact" value="Send" class="btn btn-default" />*@
                     </div>
                 </div>
@@ -359,13 +368,11 @@
             }
 
             <!--<form action="@Url.Action("Index","Success")">-->
-
-
-                @*<input type="text" name="name" id="name" required placeholder="Your Name">
-            <input type="email" name="mail" id="mail" required placeholder="Your Email">
-            <input type="tel" name="tel" id="tel" required placeholder="Phone Number">
-            <textarea name="mess" id="mess" rows="7" placeholder="Your Message Here..."></textarea>
-            <button type="submit" id="btnContact">Send<i class="fa fa-paper-plane"></i></button>*@
+            @*<input type="text" name="name" id="name" required placeholder="Your Name">
+                <input type="email" name="mail" id="mail" required placeholder="Your Email">
+                <input type="tel" name="tel" id="tel" required placeholder="Phone Number">
+                <textarea name="mess" id="mess" rows="7" placeholder="Your Message Here..."></textarea>
+                <button type="submit" id="btnContact">Send<i class="fa fa-paper-plane"></i></button>*@
             <!--</form>-->
             <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15305.318394064881!2d107.5810189!3d16.4588401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4eb6bafb31d4c653!2zSHXhur8gQXB0ZWNo!5e0!3m2!1svi!2s!4v1600697484418!5m2!1svi!2s" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

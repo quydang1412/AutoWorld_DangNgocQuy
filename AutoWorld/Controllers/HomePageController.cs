@@ -37,17 +37,42 @@ namespace AutoWorld.Controllers
             var dao = new ContactDAO();
             if (dao.InsertContactInfor(contact))
             {
-                TempData["Message"] = new NotificationMessage("your action was success","success");
+                //TempData["Message"] = new NotificationMessage("your action was success","success");
+                SetAlert("your action was success", "success");
                 return Json(new
                 {
                     status = true
                 }); 
             }
 
+            SetAlert("your action was fail", "error");
+
             return Json(new
             {
                 status = false
             });
+        }
+
+        protected void SetAlert(string message,string messageType)
+        {
+            
+            TempData["AlertMessage"] = message;
+         
+            switch (messageType)
+            {
+                case "success":
+                    TempData["AlertType"] = "alert-success";
+                    break;
+                case "error":
+                    TempData["AlertType"] = "alert-danger";
+                    break;
+                case "warn":
+                    TempData["AlertType"] = "alert-warning";
+                    break;
+                default:
+                    TempData["AlertType"] = "alert-info";
+                    break;
+            }
         }
     }
 }

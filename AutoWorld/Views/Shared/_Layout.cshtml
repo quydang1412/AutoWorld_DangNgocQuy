@@ -8,21 +8,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="~/Content/Library/libs/bootstrap/css/bootstrap.min.css">
+    @Styles.Render("~/bundles/Library/css")
+    @Scripts.Render("~/bundles/js")
 
-    <!-- Fontawesome  -->
-    <script type="text/javascript" src="~/Content/Library/libs/font-awesome/js/all.js"></script>
-    
-    <!-- Optional JavaScript -->
-    @*<script type="text/javascript" src="~/Content/Library/libs/jquery/jquery-3.5.1.slim.js"></script>*@
-    <script type="text/javascript" src="~/Content/Library/libs/jquery/jquery-3.6.0.js"></script>
-    <script src="~/Content/Library/libs/jquery/popper_1.12.9.min.js"></script>
-    <script type="text/javascript" src="~/Content/Library/libs/bootstrap/js/bootstrap.min.js"></script>
-    
     <!-- my css -->
     <link rel="stylesheet" href="~/Content/Library/css/main.css">
-    
+
 </head>
 <body>
     <!-- header -->
@@ -77,7 +68,7 @@
     </header>
     <!-- /header -->
     <!-- main -->
-    @{Html.RenderPartial("_Notification"); }
+    
     @RenderBody()
     <!-- /main -->
     <!-- footer	 -->
@@ -138,6 +129,10 @@
         </div>
     </footer>
     <!-- /footer -->
+    
+    @Scripts.Render("~/bundles/ckeditor")
+
+
     @*@Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @Scripts.Render("~/bundles/Library")*@

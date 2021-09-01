@@ -23,6 +23,8 @@
                 success: function (res) {
                     if (res.status) {
                         //alert("gui thanh cong");
+                        $('#AlertBox').addClass("alert-success");
+                        $('#AlertBox').html('Action is sucess');
                     }
                 }
 

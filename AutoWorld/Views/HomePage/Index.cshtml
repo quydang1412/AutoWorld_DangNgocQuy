@@ -327,13 +327,17 @@
     <!-- /loan-->
     @*@{Html.RenderPartial("_Notification"); }*@
 
-    @if (TempData["AlertMessage"] != null)
-    {
+    @*@if (TempData["AlertMessage"] != null)
+        {
 
-        <div class="alert @TempData["AlertType"] sticky-top " role="alert" id="AlertBox">
-            @TempData["AlertMessage"]
-        </div>
-    }
+            <div class="alert @TempData["AlertType"] " role="alert" id="AlertBox">
+                @TempData["AlertMessage"]
+            </div>
+        }*@
+
+    <div class="alert" role="alert" id="AlertBox">
+        
+    </div>
     <!-- contact -->
     <div id="contact" class="container-fluid padding social-media pt-3">
         <div class="col tt1">
@@ -344,6 +348,7 @@
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken();
+
 
                 <div class="form-group">
                     @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @id = "name", @required = true, @placeholder = "Your Name" } })

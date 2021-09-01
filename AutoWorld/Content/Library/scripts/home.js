@@ -1,2 +1,2 @@
-﻿$('#AlertBox').removeClass('hide');
+﻿/*/*$('#AlertBox').removeClass('hide');*/*/
 /*$('#AlertBox').delay(1000).slideUp(500);*/

@@ -38,7 +38,7 @@ namespace AutoWorld.Controllers
             if (dao.InsertContactInfor(contact))
             {
                 //TempData["Message"] = new NotificationMessage("your action was success","success");
-                SetAlert("your action was success", "success");
+                //SetAlert("your action was success", "success");
                 return Json(new
                 {
                     status = true

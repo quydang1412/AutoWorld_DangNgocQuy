@@ -4,6 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section scripts{
+
+    <script src="~/Ajax/Contact.js"></script>
+
+}
+
+
+
+
 <!-- Carousel -->
 <div id="slides" class="carousel slide " data-ride="carousel">
     <ul class="carousel-indicators">
@@ -52,13 +61,15 @@
     </a>
 </div>
 <!-- /Carousel -->
+<div class="alert sticky-top mb-0" role="alert" id="AlertBox1" style="display:none;" >
+
+</div>
 <!-- Contact Us------------------------------------------ -->
 <div id="contact-section">
     <div class="container">
         <h2>Contact Us</h2>
         <p>Email us and keep upto date with our latest news</p>
         <div class="contact-form">
-
             <div class="icon-form">
                 <a href="https://goo.gl/maps/9mt66YhCT2eZVua1A"><i class="icons fas fa-map-marker-alt"></i></a>
                 <span class="form-info">6 Le Loi, Hue city, Viet Nam</span><br>
@@ -72,15 +83,13 @@
                 </a>
                 <span class="form-info">HueAptech@gmail.com</span>
             </div>
-
             <div>
-                <form id="form" action="success.html">
-                    <input type="text" placeholder="Your Name" required>
-                    <!-- <input type="text" placeholder="Your Name" required> -->
-                    <input type="Email" placeholder="Your mail" required>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
-                    <button class="submit">Send Message</button>
+                <form id="form">
+                    <input type="text" name="name" id="name" required placeholder="Your Name">
+                    <input type="email" name="mail" id="email" required placeholder="Your Email">
+                    <input type="tel" name="tel" id="tel" required placeholder="Phone Number">
+                    <textarea name="mess" id="mess" rows="7" placeholder="Your Message Here..."></textarea>
+                    <button type="reset" id="btnContact" class="btn submit">Send<i class="fa fa-paper-plane "></i></button>
                 </form>
             </div>
 

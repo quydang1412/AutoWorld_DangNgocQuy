@@ -601,12 +601,14 @@
     <Content Include="Content\Library\libs\datatables\datatables.min.js" />
     <Content Include="Content\Library\libs\font-awesome\js\all.js" />
     <Content Include="Content\Library\libs\font-awesome\js\fontawesome.js" />
+    <Content Include="Content\Library\libs\jquery\jquery-3.4.1.min.js" />
     <Content Include="Content\Library\libs\jquery\jquery-3.5.1.slim.js" />
     <Content Include="Content\Library\libs\jquery\popper_1.12.9.min.js" />
     <Content Include="Content\Library\libs\jquery\popper_1.16.1.min.js" />
     <Content Include="Content\Library\scripts\compare.js" />
     <Content Include="Content\Library\scripts\detail.js" />
     <Content Include="Content\Library\scripts\home.js" />
+    <Content Include="Content\Library\scripts\loan.js" />
     <Content Include="Content\Library\scripts\products.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1048,6 +1050,8 @@
     <Content Include="Views\Shared\NotFound.cshtml" />
     <Content Include="Views\Details\DetailProductMotor.cshtml" />
     <Content Include="Views\Success\Index.cshtml" />
+    <Content Include="Views\HomePage\Contact.cshtml" />
+    <Content Include="Views\HomePage\Contact2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

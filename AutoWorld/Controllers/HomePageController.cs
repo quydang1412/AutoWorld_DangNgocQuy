@@ -16,6 +16,16 @@ namespace AutoWorld.Controllers
         {
             return View();
         }
+        //[HttpGet]
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult Contact2()
+        {
+            return View();
+        }
 
         /// <summary>
         /// Submit Contact from Index
@@ -45,7 +55,7 @@ namespace AutoWorld.Controllers
                 }); 
             }
 
-            SetAlert("your action was fail", "error");
+            //SetAlert("your action was fail", "error");
 
             return Json(new
             {

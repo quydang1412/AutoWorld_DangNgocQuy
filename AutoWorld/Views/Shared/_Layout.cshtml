@@ -13,12 +13,12 @@
 
     <!-- my css -->
     <link rel="stylesheet" href="~/Content/Library/css/main.css">
-
+    @RenderSection("jsHeader", false)
 </head>
 <body>
     <!-- header -->
     <header id="header" class="">
-        <!-- navigation -->
+        <!--navigation-->
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
             <a href="HomePage/Index" title="">
                 <img src="~/Content/Library/images/logo.png" alt="" height="60px">
@@ -64,80 +64,80 @@
             </div>
 
         </nav>
-        <!-- /navigation -->
+        <!--/navigation-->
     </header>
     <!-- /header -->
-    <!-- main -->
-    
-    @RenderBody()
-    <!-- /main -->
-    <!-- footer	 -->
-    <footer>
-        <div class="container-fluid padding pt-3">
-            <div class="row">
-                <div class="inf col-sm-6 col-md-3 pl-4 pr-0">
-                    <p class="font-weight-bold">Our company</p>
-                    <p>6 LeLoi, Hue City</p>
-                    <p>Phone: <a href="tel:+84123456789" title="">+84 123456789</a></p>
-                    <p>Email: <a href="mailto:autoworld05@gmail.com" title="">autoworld05@gmail.com</a></p>
-                </div>
-                <div class="inf col-sm-6 col-md-2 pl-4 ">
-                    <p class="font-weight-bold">Menu</p>
-                    <p><a href="index.html" title="">Home</a></p>
-                    <p><a href="about.html" title="">About us</a></p>
-                    <p><a href="products.html" title="">Products</a></p>
-                    <p><a href="loan.html" title="">Loan</a></p>
-                    <p><a href="contact.html" title="">Contact</a></p>
-                </div>
-                <div class="inf col-sm-6 col-md-2 pl-4">
-                    <p class="font-weight-bold">Services</p>
-                    <p><a href="services.html?#no1">Warranty Policy</a></p>
-                    <p><a href="services.html?#no2">Maintenance service</a></p>
-                    <p><a href="services.html?#no3">Repair Services</a></p>
-                </div>
-                <div class="inf col-sm-6 col-md-5 pl-4">
-                    <p class="font-weight-bold">Subscribe</p>
-                    <p class="pb-2">Subscribe to receive the latest news from us</p>
-                    <form action="@Url.Action("Index","Success")">
-                        <div class="input-group">
-                            <input type="email" placeholder="Email address" class="form-control form-email-widget" required>
-                            <span class="input-group-append">
-                                <button id="send" type="submit" class="btn-email btn-success">Submit</button>
-                            </span>
+        <!-- main -->
+
+        @RenderBody()
+        <!-- /main -->
+        <!-- footer	 -->
+        <footer>
+            <div class="container-fluid padding pt-3">
+                <div class="row">
+                    <div class="inf col-sm-6 col-md-3 pl-4 pr-0">
+                        <p class="font-weight-bold">Our company</p>
+                        <p>6 LeLoi, Hue City</p>
+                        <p>Phone: <a href="tel:+84123456789" title="">+84 123456789</a></p>
+                        <p>Email: <a href="mailto:autoworld05@gmail.com" title="">autoworld05@gmail.com</a></p>
+                    </div>
+                    <div class="inf col-sm-6 col-md-2 pl-4 ">
+                        <p class="font-weight-bold">Menu</p>
+                        <p><a href="index.html" title="">Home</a></p>
+                        <p><a href="about.html" title="">About us</a></p>
+                        <p><a href="products.html" title="">Products</a></p>
+                        <p><a href="loan.html" title="">Loan</a></p>
+                        <p><a href="contact.html" title="">Contact</a></p>
+                    </div>
+                    <div class="inf col-sm-6 col-md-2 pl-4">
+                        <p class="font-weight-bold">Services</p>
+                        <p><a href="services.html?#no1">Warranty Policy</a></p>
+                        <p><a href="services.html?#no2">Maintenance service</a></p>
+                        <p><a href="services.html?#no3">Repair Services</a></p>
+                    </div>
+                    <div class="inf col-sm-6 col-md-5 pl-4">
+                        <p class="font-weight-bold">Subscribe</p>
+                        <p class="pb-2">Subscribe to receive the latest news from us</p>
+                        <form action="@Url.Action("Index","Success")">
+                            <div class="input-group">
+                                <input type="email" placeholder="Email address" class="form-control form-email-widget" required>
+                                <span class="input-group-append">
+                                    <button id="send" type="submit" class="btn-email btn-success">Submit</button>
+                                </span>
+                            </div>
+                        </form>
+                        <div class="padding">
+                            <div class=" my-3">
+                                <p id="contact1" class="font-weight-bold">Contact us</p>
+                            </div>
+                            <div class="social1 text-center padding my-auto ">
+                                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                                <a href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                            </div>
                         </div>
-                    </form>
-                    <div class="padding">
-                        <div class=" my-3">
-                            <p id="contact1" class="font-weight-bold">Contact us</p>
-                        </div>
-                        <div class="social1 text-center padding my-auto ">
-                            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                            <a href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                        </div>
+
                     </div>
 
                 </div>
-
             </div>
-        </div>
-        <div class="container-fluid " id="privacy">
-            <div class="row align-items-center " style="min-height: 30px;">
-                <p class=" col-12 text-white my-auto text-center">© 2020 by AutoWorld </p>
+            <div class="container-fluid " id="privacy">
+                <div class="row align-items-center " style="min-height: 30px;">
+                    <p class=" col-12 text-white my-auto text-center">© 2020 by AutoWorld </p>
+                </div>
             </div>
-        </div>
-    </footer>
-    <!-- /footer -->
-    
-    @Scripts.Render("~/bundles/ckeditor")
+        </footer>
+        <!-- /footer -->
+
+        @Scripts.Render("~/bundles/ckeditor")
 
 
-    @*@Scripts.Render("~/bundles/jquery")
+        @*@Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @Scripts.Render("~/bundles/Library")*@
-    @RenderSection("scripts", required: false)
-    <script src="~/Content/Library/scripts/home.js"></script>
+        @RenderSection("scripts", required: false)
+        @*<script src="~/Content/Library/scripts/home.js"></script>*@
 </body>
 </html>
 

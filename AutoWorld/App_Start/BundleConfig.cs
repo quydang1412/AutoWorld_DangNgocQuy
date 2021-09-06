@@ -25,7 +25,7 @@ namespace AutoWorld
 
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                       "~/Content/Library/libs/font-awesome/js/all.js",
-                      "~/Content/Library/libs/jquery/jquery-3.6.0.js",
+                      "~/Content/Library/libs/jquery/jquery-3.4.1.min.js",
                       "~/Content/Library/libs/jquery/popper_1.12.9.min.js",
                       "~/Content/Library/libs/bootstrap/js/bootstrap.min.js"));
 

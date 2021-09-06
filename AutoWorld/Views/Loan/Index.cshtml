@@ -4,9 +4,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section jsHeader{
+    @*scripts for calculator payment*@
+    <script src="~/Content/Library/scripts/loan.js"></script>
+}
+
 <div class="bank container-fluid p-0">
     <div class=" p-0 m-0">
-        <img src="~/Content/Library/images/loan/bgbank.jpg" width="100%">
+        <img src="~/Content/Library/images/loan/bgbank.jpg" class="w-100">
     </div>
     <div class="text-center mt-2 col tt1 pt-3 te" id="no1">
         <h2>WHY WE SHOULD CHOOSE AUTOWORLD</h2>
@@ -60,16 +65,16 @@
         </h2>
     </div>
     <div class="container">
-        <div ng-controller="myController" class="row">
+        <div class="row">
             <div class="col text-center java">
                 <h4 class="p-3">
                     Enter the amount you want to borrow<br>
                 </h4>
-                <input class=" m-0  w-35" type="text" min="0" max="1000000000" id="sovay" onchange="tinhlai" required placeholder="input number $" ng-model="money" required>
+                <input class=" m-0  w-50" type="number" min="0" max="1000000000" id="sovay" required placeholder="input number $" onchange="calculator()">
                 <h4 class="p-3">
                     Number of months max 78 months
                 </h4>
-                <input type="number" ng-model="months" id="sothang" min="1" max="78" value="0" onchange="tinhlai" required=""> months
+                <input type="number" id="sothang" min="1" max="78" value="0" required onchange="calculator()"> months
                 <h4 class="p-3">
 
                     corporate interest rate per year<br>
@@ -77,23 +82,16 @@
                 </h4>
             </div>
             <div class="col text-center  mt-3">
-                <h4>The amount you pay every month is:</h4>
-                <p style="font-size:60px">
-                    @*_{{money * 1.1 / months | currency}}_*@
-
+                <h4>The amount you pay is:</h4>
+                <p style="font-size:40px; color: red;" id="payment" class="hide mb-0">
                 </p>
                 <div class="months">
-                    <p style="font-size:70px">
-                        months
+                    <p style="font-size:40px" class="mb-0">
+                       /month
                     </p>
                 </div>
             </div>
-            <script>
-                var myApp = angular.module("myApp", []);
-                myApp.controller("myController", function ($scope) {
-                    $scope.name = "";
-                });
-            </script>
+           
         </div>
     </div>
 </div>

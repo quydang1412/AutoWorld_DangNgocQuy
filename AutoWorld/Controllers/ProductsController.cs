@@ -77,6 +77,69 @@ namespace AutoWorld.Controllers
             return View("Index",products);
         }
 
+
+        [HttpPost]
+        public ActionResult FilterCategory()
+        {
+            double a = 0;
+            double b = 0;
+            string category = HttpContext.Request.Form["CategoryID"];
+            string model = HttpContext.Request.Form["Model"];
+
+            switch (HttpContext.Request.Form["Price"])
+            {
+                case "all":
+                    {
+                        a = 1000000;
+                        b = 0;
+                        break;
+                    }
+                case "prl15":
+                    {
+                        a = 15000;
+                        b = 0;
+                        break;
+                    }
+                case "pr15_100":
+                    {
+                        a = 100000;
+                        b = 15000;
+                        break;
+                    }
+                case "pru100":
+                    {
+                        a = 1000000;
+                        b = 100000;
+                        break;
+                    }
+
+            }
+
+            string location = HttpContext.Request.Form["showRoom"];
+            string name = HttpContext.Request.Form["Name"];
+
+            var products = db.Products.Include(p => p.Categories).Include(p => p.Location).AsEnumerable().Where(
+                p => p.Categories.Name.Contains(category) &&
+                p.Description.Contains(model) &&
+                p.Price >= b && p.Price < a &&
+                p.Location.LocalName.Contains(location) &&
+                p.Name.Contains(name)
+                );
+            //var products = db.Products.Include(p => p.Categories).Include(p => p.Location).AsEnumerable().Where(p => p.CategoryId == long.Parse(HttpContext.Request.Form["CategoryID"]));
+            return PartialView("_ProductPartialView",products);
+        }
+
+        //[HttpPost]
+        public JsonResult ListName(string keyword)
+        {
+            var data = db.Products.Where(p => p.Name.Contains(keyword)).Select(p => p.Name).ToList();
+            return Json(new 
+            {
+                data = data,
+                status = true
+            }, JsonRequestBehavior.AllowGet);
+        }
+
         // GET: Products/Details/5
         public ActionResult Details(long? id)
         {

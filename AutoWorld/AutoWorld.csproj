@@ -556,6 +556,8 @@
     <Content Include="Content\Library\images\services\se-9.jpg" />
     <Content Include="Content\Library\images\sitemap3.PNG" />
     <Content Include="Content\Library\libs\angularjs\angular.js" />
+    <Content Include="Content\Library\libs\autocomplete\jquery-ui.css" />
+    <Content Include="Content\Library\libs\autocomplete\jquery-ui.js" />
     <Content Include="Content\Library\libs\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Content\Library\libs\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Content\Library\libs\bootstrap\css\bootstrap-reboot.css" />
@@ -605,6 +607,7 @@
     <Content Include="Content\Library\libs\jquery\jquery-3.5.1.slim.js" />
     <Content Include="Content\Library\libs\jquery\popper_1.12.9.min.js" />
     <Content Include="Content\Library\libs\jquery\popper_1.16.1.min.js" />
+    <Content Include="Content\Library\scripts\AutoComplete.js" />
     <Content Include="Content\Library\scripts\compare.js" />
     <Content Include="Content\Library\scripts\detail.js" />
     <Content Include="Content\Library\scripts\home.js" />
@@ -1016,6 +1019,8 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -1052,6 +1057,8 @@
     <Content Include="Views\Success\Index.cshtml" />
     <Content Include="Views\HomePage\Contact.cshtml" />
     <Content Include="Views\HomePage\Contact2.cshtml" />
+    <Content Include="Views\Products\ProductPartial.cshtml" />
+    <Content Include="Views\Shared\_ProductPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

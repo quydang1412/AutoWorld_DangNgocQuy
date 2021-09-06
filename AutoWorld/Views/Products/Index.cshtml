@@ -5,70 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*<h2>Index</h2>
+@section jsHeader{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <link href="~/Content/Library/libs/autocomplete/jquery-ui.css" rel="stylesheet" />
+}
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Categories.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Location.LocalName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th></th>
-    </tr>
+@section scripts{
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categories.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location.LocalName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Content)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-    }
-
-</table>*@
+    <script src="~/Content/Library/libs/autocomplete/jquery-ui.js"></script>
+    <script src="~/Content/Library/scripts/AutoComplete.js"></script>
+}
 
 <main>
 
@@ -121,15 +67,24 @@
     </div>
     <!-- /Carousel -->
 
-    @using (Html.BeginForm("Search", "Products", FormMethod.Post))
+    @using (Ajax.BeginForm("FilterCategory", null,
+    new AjaxOptions
     {
-        <!-- --search-- -->
- 
-        <div class="advancedSearch container mt-4">
+        HttpMethod = "Post",
+        UpdateTargetId = "ResultFilter",
+        InsertionMode = InsertionMode.Replace,
+        LoadingElementId = "LoadingFilter"
+
+
+    }, new { @class = "col-12" }))
+    {
+        <!-- --filter-- -->
+
+        <div class="advancedSearch container mt-4 col-12">
 
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             @*@Html.HiddenFor(model => model.Id)*@
-            <div class="name row ">
+            <div class="name row m-0 ">
                 <select id="myselect1" name="CategoryID" class="form-control form-control-lg col-md-2 col-6">
                     <option value=""> Brands</option>
                     <option value="Toyota"> Toyota</option>
@@ -138,69 +93,44 @@
                     <option value="Honda"> Honda</option>
                     <option value="Yamaha"> Yamaha</option>
                 </select>
-                <select id="myselect2" name="Model" class="form-control form-control-lg col-md-3 col-6">
+                <select id="myselect2" name="Model" class="form-control form-control-lg col-md-2 col-6">
                     <option value=""> All models</option>
                     <option value="SUV"> SUV</option>
                     <option value="Sedan"> Sedan</option>
                 </select>
-                <select id="myselect3" name="Price" class="form-control form-control-lg col-md-3 col-6">
+                <select id="myselect3" name="Price" class="form-control form-control-lg col-md-2 col-6">
                     <option value="all">All price</option>
                     <option value="prl15">$ lower 15,000</option>
                     <option value="pr15_100">$ 15,000 - 100,000</option>
                     <option value="pru100">$ upper 100,000</option>
                 </select>
-                <select id="myselect4" name="showRoom" class="form-control form-control-lg col-md-4 col-6">
+                <select id="myselect4" name="showRoom" class="form-control form-control-lg col-md-2 col-6">
                     <option class="" value=""> Location dealer</option>
-                    <option class="" value="6 Le Loi"> 6 Le Loi, Hue, Vietnam</option>
-                    <option class="" value="20 Hung Vuong"> 11 Ly Thuong Kiet, Hue, Vietnam</option>
-                    <option class="" value="6 Le Loi"> 8 Hai Ba Trung, Hue, Vietnam</option>
-                    <option class="" value="20 Hung Vuong"> 20 Hung Vuong, Hue, Vietnam</option>
+                    <option class="" value="6 Le Loi"> 6 Le Loi, Hue</option>
+                    <option class="" value="20 Hung Vuong"> 11 Ly Thuong Kiet, Hue</option>
+                    <option class="" value="6 Le Loi"> 8 Hai Ba Trung, Hue</option>
+                    <option class="" value="20 Hung Vuong"> 20 Hung Vuong, Hue</option>
                 </select>
                 @*<div class="form-group">
                         @Html.DropDownList("CategoryId", null, htmlAttributes: new { @class = "form-control form-control-lg col-md-2 col-6" })
                     </div>*@
-
-
-
-
+                <input id="txtSearch" type="text" name="Name" placeholder="Search by name.." class="form-control form-control-lg col-md-4" />
                 <button type="submit" class="btn btn4 col-2 mt-2 bg-success ml-auto">Search</button>
             </div>
         </div>
 
     }
+
     <div class="container container-fluid mt-3 col">
         <div class="filterDiv col all no1 no2 no3 no4 Toyota Audi Mercedes">
             <h1>Cars</h1>
             <hr>
         </div>
         <!-- --line1-- -->
-        <div class="row">
-            @foreach (var item in Model)
-            {
-                <!-- Product  -->
-
-                <div class=" col-sm-6 col-lg-4 product-grid1">
-                    <div class="image">
-                        <a href="@Url.Action("DetailProduct","Details",new { id = item.Id })" title="">
-                            <img src="~/Content/Library/@Html.DisplayFor(modelItem => item.Image)" alt="">
-                        </a>
-                        <h4 class="text-center">@Html.DisplayFor(modelItem => item.Name)</h4>
-                        <h5 class="text-center">Price: $@Html.DisplayFor(modelItem => item.Price)</h5>
-                        @*<h5 class="text-center">@Html.DisplayFor(modelItem => item.description) seat</h5>*@
-                        <a href="@Url.Action("DetailProduct","Details",new { id = item.Id })" class=" buy btn btn-danger btn-lg ">Details</a>
-                        <a href="@Url.Action("AddToCart","Cart",new { id = item.Id })" class=" buy btn btn-danger btn-lg ml-3">Add Cart</a>
-                        @*<a>@Html.ActionLink("Add to Cart", "AddToCart", new { controller = "Cart", id = item.Id }, new { class=" buy btn btn-danger btn-lg ")</a>*@
-
-                        @{
-                            //JsonConvert.SerializeObject
-                            //Convert.
-                        }
-                    </div>
-                </div>
-                <!-- ./Product -->
-            }
-
+        <div id="ResultFilter" class="row">
+            @Html.Partial("_ProductPartialView")
         </div>
+
         <!-- line8 -->
     </div>
 

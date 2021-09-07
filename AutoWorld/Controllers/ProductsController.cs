@@ -6,7 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using AutoWorld.Models;
+using Newtonsoft.Json;
 using AutoWorld.Models.ViewModels;
 
 namespace AutoWorld.Controllers
@@ -25,18 +27,20 @@ namespace AutoWorld.Controllers
         public ActionResult SearchProduct()
         {
             var products = db.Products.Include(p => p.Categories).Include(p => p.Location);
-            return View("SearchProduct",products.ToList());
+            return View("SearchProduct", products.ToList());
         }
 
-        [HttpPost]
-        public ActionResult Search()
+        public ActionResult FilterCategory(string CategoryID, string Model, string Price, string showRoom, string Name, int pageIndex = 1, int pageSize = 6)
         {
+            IEnumerable<Products> products = null;
+
             double a = 0;
             double b = 0;
-            string category = HttpContext.Request.Form["CategoryID"];
-            string model = HttpContext.Request.Form["Model"];
+            string category = CategoryID;
+            string model = Model;
+            string price = Price;
 
-            switch (HttpContext.Request.Form["Price"])
+            switch (price)
             {
                 case "all":
                     {
@@ -65,79 +69,53 @@ namespace AutoWorld.Controllers
 
             }
 
-            string location = HttpContext.Request.Form["showRoom"];
+            string location = showRoom;
+            string name = Name;
 
-            var products = db.Products.Include(p => p.Categories).Include(p => p.Location).AsEnumerable().Where(
-                p => p.Categories.Name.Contains(category) &&
-                p.Description.Contains(model) &&
-                p.Price >= b && p.Price < a &&
-                p.Location.LocalName.Contains(location)
-                );
-            //var products = db.Products.Include(p => p.Categories).Include(p => p.Location).AsEnumerable().Where(p => p.CategoryId == long.Parse(HttpContext.Request.Form["CategoryID"]));
-            return View("Index",products);
-        }
-
-
-        [HttpPost]
-        public ActionResult FilterCategory()
-        {
-            double a = 0;
-            double b = 0;
-            string category = HttpContext.Request.Form["CategoryID"];
-            string model = HttpContext.Request.Form["Model"];
-
-            switch (HttpContext.Request.Form["Price"])
-            {
-                case "all":
-                    {
-                        a = 1000000;
-                        b = 0;
-                        break;
-                    }
-                case "prl15":
-                    {
-                        a = 15000;
-                        b = 0;
-                        break;
-                    }
-                case "pr15_100":
-                    {
-                        a = 100000;
-                        b = 15000;
-                        break;
-                    }
-                case "pru100":
-                    {
-                        a = 1000000;
-                        b = 100000;
-                        break;
-                    }
-
-            }
-
-            string location = HttpContext.Request.Form["showRoom"];
-            string name = HttpContext.Request.Form["Name"];
-
-            var products = db.Products.Include(p => p.Categories).Include(p => p.Location).AsEnumerable().Where(
+            products = db.Products.Include(p => p.Categories).Include(p => p.Location).AsEnumerable().Where(
                 p => p.Categories.Name.Contains(category) &&
                 p.Description.Contains(model) &&
                 p.Price >= b && p.Price < a &&
                 p.Location.LocalName.Contains(location) &&
                 p.Name.Contains(name)
                 );
-            //var products = db.Products.Include(p => p.Categories).Include(p => p.Location).AsEnumerable().Where(p => p.CategoryId == long.Parse(HttpContext.Request.Form["CategoryID"]));
-            return PartialView("_ProductPartialView",products);
+            //paging for products
+            double totalRecord = 0;
+            var listProducts = Paging(products, ref totalRecord, pageIndex, pageSize);
+            ViewBag.Total = totalRecord;
+            ViewBag.Page = pageIndex;
+            int maxPage = 6;
+            int totalPage = 0;
+            totalPage = (int)Math.Ceiling(totalRecord / pageSize);
+            ViewBag.TotalPage = totalPage;
+            ViewBag.MaxPage = maxPage;
+            ViewBag.First = 1;
+            ViewBag.Last = totalPage;
+            ViewBag.Next = pageIndex + 1;
+            ViewBag.Prev = pageIndex - 1;
+            ViewBag.Link = "/Products/FilterCategory?CategoryID=" + CategoryID + "&Model=" + Model + "&Price=" + Price + "&showRoom=" + showRoom + "&Name=" + Name;
+
+            return PartialView("_ProductPartialView", listProducts);
         }
 
-        //[HttpPost]
+        //GET
         public JsonResult ListName(string keyword)
         {
             var data = db.Products.Where(p => p.Name.Contains(keyword)).Select(p => p.Name).ToList();
-            return Json(new 
+            return Json(new
             {
                 data = data,
                 status = true
             }, JsonRequestBehavior.AllowGet);
+        }
+
+
+        public IEnumerable<Products> Paging(IEnumerable<Products> p, ref double totalRecord, int pageIndex, int pageSize)
+        {
+            totalRecord = p.Count();
+            IEnumerable<Products> products = p.Skip((pageIndex - 1) * pageSize).Take(pageSize);
+
+            return products;
         }
 
         // GET: Products/Details/5

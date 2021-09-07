@@ -70,7 +70,7 @@
     @using (Ajax.BeginForm("FilterCategory", null,
     new AjaxOptions
     {
-        HttpMethod = "Post",
+        HttpMethod = "Get",
         UpdateTargetId = "ResultFilter",
         InsertionMode = InsertionMode.Replace,
         LoadingElementId = "LoadingFilter"
@@ -118,8 +118,8 @@
                 <button type="submit" class="btn btn4 col-2 mt-2 bg-success ml-auto">Search</button>
             </div>
         </div>
-
     }
+    
 
     <div class="container container-fluid mt-3 col">
         <div class="filterDiv col all no1 no2 no3 no4 Toyota Audi Mercedes">
@@ -133,6 +133,8 @@
 
         <!-- line8 -->
     </div>
+
+    
 
 
 

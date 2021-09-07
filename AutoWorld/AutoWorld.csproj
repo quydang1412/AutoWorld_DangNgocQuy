@@ -235,6 +235,7 @@
     <Compile Include="Controllers\SitemapController.cs" />
     <Compile Include="Controllers\SuccessController.cs" />
     <Compile Include="DAO\ContactDAO.cs" />
+    <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -10,6 +10,7 @@ namespace AutoWorld.Models
         public AutoWorlDbContext()
             : base("name=Auto_World")
         {
+            
         }
 
         

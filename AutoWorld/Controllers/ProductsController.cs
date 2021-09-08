@@ -21,6 +21,7 @@ namespace AutoWorld.Controllers
         public ActionResult Index()
         {
             var products = db.Products.Include(p => p.Categories).Include(p => p.Location);
+            //return RedirectToAction("FilterCategory", new { CategoryID = "", Model = "", Price = "", showRoom = "", Name = "" });
             return View(products.ToList());
         }
 

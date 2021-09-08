@@ -14,6 +14,7 @@
 
     <script src="~/Content/Library/libs/autocomplete/jquery-ui.js"></script>
     <script src="~/Content/Library/scripts/AutoComplete.js"></script>
+    <script src="~/Content/Library/scripts/products.js"></script>
 }
 
 <main>
@@ -115,7 +116,7 @@
                         @Html.DropDownList("CategoryId", null, htmlAttributes: new { @class = "form-control form-control-lg col-md-2 col-6" })
                     </div>*@
                 <input id="txtSearch" type="text" name="Name" placeholder="Search by name.." class="form-control form-control-lg col-md-4" />
-                <button type="submit" class="btn btn4 col-2 mt-2 bg-success ml-auto">Search</button>
+                <button type="submit" class="btn btn4 col-2 mt-2 bg-success ml-auto" id="btnSearch">Search</button>
             </div>
         </div>
     }

@@ -33,9 +33,8 @@ function CheckAuthentication()
 	'
 	' ... where Session( "IsAuthorized" ) is set to "true" as soon as the
 	' user logs in your system.
-	
+
 	CheckAuthentication = true
-	'CheckAuthentication = ( Session( "IsAuthorized" ) )
 End function
 
 ' In order to find out what's wrong if you have some problems setting up the editor you
@@ -65,7 +64,7 @@ Dim baseUrl, baseDir
 '
 'ATTENTION: The trailing slash is required.
 
-baseUrl = "/Uploads/"
+baseUrl = "/UploadFiles/"
 
 'baseDir : the path to the local directory (in the server) which points to the
 'above baseUrl URL. This is the path used by CKFinder to handle the files in
@@ -80,7 +79,7 @@ baseUrl = "/Uploads/"
 '
 'ATTENTION: The trailing slash is required.
 
-baseDir = "F:\hoctap\Interview\AutoWorld\AutoWorld_DangNgocQuy\AutoWorld\Uploads\"
+baseDir = "F:\hoctap\Interview\AutoWorld\AutoWorld_DangNgocQuy\AutoWorld\UploadFiles\"
 
 '
 ' ### Advanced Settings

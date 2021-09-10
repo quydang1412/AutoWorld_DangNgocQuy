@@ -9,9 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     @Styles.Render("~/bundles/Library/css")
     @Scripts.Render("~/bundles/js")
-
+    @Scripts.Render("~/bundles/ckeditor")
     <!-- my css -->
     <link rel="stylesheet" href="~/Content/Library/css/main.css">
+    <script src="~/Scripts/ckfinder/ckfinder.js"></script>
     @RenderSection("jsHeader", false)
 
 </head>
@@ -149,7 +150,7 @@
     </footer>
     <!-- /footer -->
 
-    @Scripts.Render("~/bundles/ckeditor")
+    
 
     @RenderSection("scripts", required: false)
 

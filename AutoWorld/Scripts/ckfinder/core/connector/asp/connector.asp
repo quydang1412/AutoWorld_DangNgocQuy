@@ -56,7 +56,7 @@
 <!-- #INCLUDE file="utils/xmlNode.asp" -->
 <!-- #INCLUDE file="utils/Translator.asp" -->
 
-<!-- #INCLUDE file="../../../config.asp" -->
+<!-- #INCLUDE virtual = "Scripts/ckfinder/config.asp" -->
 <script runat="server" language="VBScript">
 Dim sCommand
 sCommand = request.queryString("command")

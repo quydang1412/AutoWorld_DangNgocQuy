@@ -7,22 +7,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    @*<link href="~/Content/Library/" rel="stylesheet" />*@
-    @*@Scripts.Render("~/bundles/ckeditor")*@
-    @*@Styles.Render("~/Content/Library/css")
-        @Styles.Render("~/Content/Library/jquery")
-        @Styles.Render("~/Content/Library/js")*@
-        @Scripts.Render("~/bundles/modernizr")
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="~/Content/Library/libs/bootstrap/css/bootstrap.min.css">
-    <!-- Fontawesome  -->
-    <script type="text/javascript" src="~/Content/Library/libs/font-awesome/js/all.js"></script>
-    <!-- Optional JavaScript -->
-    <script type="text/javascript" src="~/Content/Library/libs/jquery/jquery-3.5.1.slim.js"></script>
-    <script src="~/Content/Library/libs/jquery/popper_1.12.9.min.js"></script>
-    <script type="text/javascript" src="~/Content/Library/libs/bootstrap/js/bootstrap.min.js"></script>
+    @Styles.Render("~/bundles/Library/css")
+    @Scripts.Render("~/bundles/js")
+
     <!-- my css -->
     <link rel="stylesheet" href="~/Content/Library/css/main.css">
+    @RenderSection("jsHeader", false)
 
 </head>
 <body>
@@ -41,12 +31,12 @@
             <div class=" collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     @*<li class="nav-item dropdown">
-            <a href="" title="" class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                <a href="#" class="dropdown-item">abc</a>
-                <a href="#" class="dropdown-item">def</a>
-            </div>
-        </li>*@
+                            <a href="" title="" class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <a href="#" class="dropdown-item">abc</a>
+                                <a href="#" class="dropdown-item">def</a>
+                            </div>
+                        </li>*@
                     <li class="nav-item">
                         <a href="" title="" class="nav-link">Home</a>
                     </li>
@@ -84,7 +74,7 @@
                         <a href="" title="" class="nav-link dropdown-toggle" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="~/Content/Library/images/users/user.png" class="img-circle" alt="User Image" style="max-width:25px;">@Context.GetOwinContext().Authentication.User.Identity.Name</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
                             <a href="@Url.Action("SignOut", "Account", new { area = ""})" class="dropdown-item">Sign Out</a>
-                            
+
                         </div>
                     </li>
 
@@ -159,10 +149,10 @@
     </footer>
     <!-- /footer -->
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/Library")
+    @Scripts.Render("~/bundles/ckeditor")
+
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
 

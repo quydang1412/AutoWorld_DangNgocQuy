@@ -272,6 +272,7 @@
     <Compile Include="Models\Enums\PublishStatus.cs" />
     <Compile Include="Models\ViewModels\array.cs" />
     <Compile Include="Models\ViewModels\CartItem.cs" />
+    <Compile Include="Models\ViewModels\CarView.cs" />
     <Compile Include="Models\ViewModels\ContactView.cs" />
     <Compile Include="Models\ViewModels\DetailsView.cs" />
     <Compile Include="Models\ViewModels\DetailsView1.cs" />
@@ -610,6 +611,7 @@
     <Content Include="Content\Library\libs\jquery\popper_1.16.1.min.js" />
     <Content Include="Content\Library\scripts\AutoComplete.js" />
     <Content Include="Content\Library\scripts\compare.js" />
+    <Content Include="Content\Library\scripts\CreateCar.js" />
     <Content Include="Content\Library\scripts\detail.js" />
     <Content Include="Content\Library\scripts\home.js" />
     <Content Include="Content\Library\scripts\loan.js" />

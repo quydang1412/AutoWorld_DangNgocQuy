@@ -7,7 +7,9 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AutoWorld.Common;
+using AutoWorld.DAO;
 using AutoWorld.Models;
+using AutoWorld.Models.ViewModels;
 
 namespace AutoWorld.Areas.Admin.Controllers
 {
@@ -109,20 +111,40 @@ namespace AutoWorld.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Image,CategoryId,Price,Description,Content,LocationId")] Products products)
+        public ActionResult Create([Bind(Include = "Id,Name,Image,CategoryId,Price,Seat,Model,Fuel,Origin,Other,ImageDetail,ImageDetail1,ImageDetail2,Content,LocationId")] CarView car)
         {
             if (ModelState.IsValid)
             {
+                ProductDAO dao = new ProductDAO();
+                Products products = dao.CarProduct(car);
                 db.Products.Add(products);
                 db.SaveChanges();
                 //SetSuccessNotification();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", products.CategoryId);
-            ViewBag.LocationId = new SelectList(db.Location, "Id", "LocalName", products.LocationId);
-            return View(products);
+            ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", car.CategoryId);
+            ViewBag.LocationId = new SelectList(db.Location, "Id", "LocalName", car.LocationId);
+            return View(car);
         }
+
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "Id,Name,Image,CategoryId,Price,Description,Content,LocationId")] Products products)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Products.Add(products);
+        //        db.SaveChanges();
+        //        //SetSuccessNotification();
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", products.CategoryId);
+        //    ViewBag.LocationId = new SelectList(db.Location, "Id", "LocalName", products.LocationId);
+        //    return View(products);
+        //}
 
         // GET: Admin/Products/Edit/5
         public ActionResult Edit(long? id)

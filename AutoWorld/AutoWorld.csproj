@@ -261,6 +261,7 @@
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Motos.cs" />
+    <Compile Include="Models\Object\CarDescription.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Products.cs" />
@@ -1726,6 +1727,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="UploadFiles\images\1%2816%29.png" />
+    <Content Include="UploadFiles\images\4a25e5e7_059e1232_vista wallpaper 37_resize.jpg" />
+    <Content Include="UploadFiles\_thumbs\Images\1%2816%29.png" />
+    <Content Include="UploadFiles\_thumbs\Images\4a25e5e7_059e1232_vista wallpaper 37_resize.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1764,7 +1769,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="UploadFiles\" />
+    <Folder Include="UploadFiles\files\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

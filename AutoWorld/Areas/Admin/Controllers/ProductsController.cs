@@ -111,7 +111,7 @@ namespace AutoWorld.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Image,CategoryId,Price,Seat,Model,Fuel,Origin,Other,ImageDetail,ImageDetail1,ImageDetail2,Content,LocationId")] CarView car)
+        public ActionResult Create([Bind(Include = "Id,Name,Image,CategoryId,Price,Seat,Model,Fuel,Origin,Other,ImageDetail1,ImageDetail2,ImageDetail3,ImageDetail4,ImageDetail5,Content,LocationId")] CarView car)
         {
             if (ModelState.IsValid)
             {

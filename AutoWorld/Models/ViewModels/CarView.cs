@@ -32,11 +32,13 @@ namespace AutoWorld.Models.ViewModels
 
         public string Other { get; set; }
 
-        public string ImageDetail { get; set; }
-
         public string ImageDetail1 { get; set; }
 
         public string ImageDetail2 { get; set; }
+
+        public string ImageDetail3 { get; set; }
+        public string ImageDetail4 { get; set; }
+        public string ImageDetail5 { get; set; }
 
         [StringLength(1024)]
         public string Description { get; set; }

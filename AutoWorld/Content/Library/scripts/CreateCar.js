@@ -22,6 +22,8 @@ var selectUrlForImage = function (btnselect, txtImg) {
 }
 
 selectUrlForImage($('#btnSelectImage'), $('#txtImage'));
-selectUrlForImage($('#btnSelectImageDetail'), $('#txtImageDetail'));
 selectUrlForImage($('#btnSelectImageDetail1'), $('#txtImageDetail1'));
 selectUrlForImage($('#btnSelectImageDetail2'), $('#txtImageDetail2'));
+selectUrlForImage($('#btnSelectImageDetail3'), $('#txtImageDetail3'));
+selectUrlForImage($('#btnSelectImageDetail4'), $('#txtImageDetail4'));
+selectUrlForImage($('#btnSelectImageDetail5'), $('#txtImageDetail5'));

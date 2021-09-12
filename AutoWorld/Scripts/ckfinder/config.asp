@@ -64,7 +64,7 @@ Dim baseUrl, baseDir
 '
 'ATTENTION: The trailing slash is required.
 
-baseUrl = "/UploadFiles/"
+baseUrl = "images/"
 
 'baseDir : the path to the local directory (in the server) which points to the
 'above baseUrl URL. This is the path used by CKFinder to handle the files in
@@ -79,7 +79,7 @@ baseUrl = "/UploadFiles/"
 '
 'ATTENTION: The trailing slash is required.
 
-baseDir = "F:\hoctap\Interview\AutoWorld\AutoWorld_DangNgocQuy\AutoWorld\UploadFiles\"
+baseDir = "F:\hoctap\Interview\AutoWorld\AutoWorld_DangNgocQuy\AutoWorld\Content\Library\images\"
 
 '
 ' ### Advanced Settings

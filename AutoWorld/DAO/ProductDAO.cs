@@ -24,14 +24,14 @@ namespace AutoWorld.DAO
             p.Price = car.Price;
             p.Content = car.Content;
             p.LocationId = car.LocationId;
-            p.Description = JsonDescription(car.Seat, car.Model, car.Fuel, car.Origin, car.Other, car.ImageDetail, car.ImageDetail1, car.ImageDetail2);
+            p.Description = JsonDescription(car.Seat, car.Model, car.Fuel, car.Origin, car.Other, car.ImageDetail1, car.ImageDetail2, car.ImageDetail3, car.ImageDetail4, car.ImageDetail5);
             return p;
 
         }
 
-        public string JsonDescription(long Seat, string Model, string Fuel, string Origin, string other, string img, string img1, string img2)
+        public string JsonDescription(long Seat, string Model, string Fuel, string Origin, string other, string img1, string img2, string img3, string img4, string img5)
         {
-            CarDescription car = new CarDescription(Seat, Model, Fuel, Origin, other, img, img1, img2);
+            CarDescription car = new CarDescription(Seat, Model, Fuel, Origin, other, img1, img2, img3, img4, img5);
             string m = new JavaScriptSerializer().Serialize(car);
             return m;
         }

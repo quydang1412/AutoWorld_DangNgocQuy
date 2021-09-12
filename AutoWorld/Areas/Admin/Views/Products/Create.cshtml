@@ -107,15 +107,6 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.ImageDetail, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.ImageDetail, new { htmlAttributes = new { @class = "form-control txtImg", @id = "txtImageDetail" } })
-            <a href="#" type="button" class="btn btn-success btn-image" id="btnSelectImageDetail">Select</a>
-            @Html.ValidationMessageFor(model => model.ImageDetail, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
         @Html.LabelFor(model => model.ImageDetail1, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ImageDetail1, new { htmlAttributes = new { @class = "form-control txtImg", @id = "txtImageDetail1" } })
@@ -133,17 +124,44 @@
         </div>
     </div>
 
-    @*<div class="form-group">
-        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.ImageDetail3, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", @style = "min-height: 100px" } })
-            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            @Html.EditorFor(model => model.ImageDetail3, new { htmlAttributes = new { @class = "form-control txtImg", @id = "txtImageDetail3" } })
+            <a href="#" type="button" class="btn btn-success btn-image" id="btnSelectImageDetail3">Select</a>
+            @Html.ValidationMessageFor(model => model.ImageDetail3, "", new { @class = "text-danger" })
         </div>
     </div>
-    <script>
-        // Add this line for each editor
-        CKEDITOR.replace("Description");
-    </script>*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ImageDetail4, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ImageDetail4, new { htmlAttributes = new { @class = "form-control txtImg", @id = "txtImageDetail4" } })
+            <a href="#" type="button" class="btn btn-success btn-image" id="btnSelectImageDetail4">Select</a>
+            @Html.ValidationMessageFor(model => model.ImageDetail4, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ImageDetail5, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ImageDetail5, new { htmlAttributes = new { @class = "form-control txtImg", @id = "txtImageDetail5" } })
+            <a href="#" type="button" class="btn btn-success btn-image" id="btnSelectImageDetail5">Select</a>
+            @Html.ValidationMessageFor(model => model.ImageDetail2, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", @style = "min-height: 100px" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <script>
+            // Add this line for each editor
+            CKEDITOR.replace("Description");
+        </script>*@
 
     <div class="form-group">
         @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })

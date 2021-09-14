@@ -22,6 +22,10 @@ namespace AutoWorld.Models
         [StringLength(255)]
         public string DisplayText { get; set; }
 
+        [Required]
+        [StringLength(50)]
+        public string Type { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Products> Products { get; set; }
     }

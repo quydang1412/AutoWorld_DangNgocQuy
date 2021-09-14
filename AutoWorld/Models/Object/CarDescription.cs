@@ -41,7 +41,6 @@ namespace AutoWorld.Models.Object
             this.img5 = ImageDetail5;
         }
 
-        
 
     }
 }

@@ -129,6 +129,37 @@ namespace AutoWorld.Areas.Admin.Controllers
         }
 
 
+        // GET: Admin/Products/Create
+        public ActionResult CreateMoto()
+        {
+            ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name");
+            ViewBag.LocationId = new SelectList(db.Location, "Id", "LocalName");
+            return View();
+        }
+
+        // POST: Admin/Products/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateMoto([Bind(Include = "Id,Name,Image,CategoryId,Price,Weight,PetrolTankCapacity,EngineType,MaximumPower,MaximumMoment,CylinderCapacity,ImageDetail,ImageDetail1,ImageDetail2,ImageDetail3,ImageDetail4,ImageDetail5,Content,LocationId")] MotoView moto)
+        {
+            if (ModelState.IsValid)
+            {
+                ProductDAO dao = new ProductDAO();
+                Products products = dao.MotoProduct(moto);
+                db.Products.Add(products);
+                db.SaveChanges();
+                //SetSuccessNotification();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", moto.CategoryId);
+            ViewBag.LocationId = new SelectList(db.Location, "Id", "LocalName", moto.LocationId);
+            return View(moto);
+        }
+
+
         //[HttpPost]
         //[ValidateAntiForgeryToken]
         //public ActionResult Create([Bind(Include = "Id,Name,Image,CategoryId,Price,Description,Content,LocationId")] Products products)

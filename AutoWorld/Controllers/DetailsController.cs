@@ -45,7 +45,7 @@ namespace AutoWorld.Controllers
                 Details = new DetailsView(product);
 
                 return View(Details);
-            }else if (product.Content.Equals("motor",StringComparison.OrdinalIgnoreCase)){
+            }else if (product.Content.Equals("moto",StringComparison.OrdinalIgnoreCase)){
                 Details1 = new DetailsView1(product);
 
                 return View("DetailProductMotor", Details1);

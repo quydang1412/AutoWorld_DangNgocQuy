@@ -632,6 +632,7 @@
     <Content Include="Content\Library\scripts\CreateMoto.js" />
     <Content Include="Content\Library\scripts\detail.js" />
     <Content Include="Content\Library\scripts\home.js" />
+    <Content Include="Content\Library\scripts\InnerDescription.js" />
     <Content Include="Content\Library\scripts\loan.js" />
     <Content Include="Content\Library\scripts\products.js" />
     <Content Include="favicon.ico" />

@@ -5,10 +5,14 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
+@section  jsHeader{
+    <link href="~/Content/Library/css/editProduct.css" rel="stylesheet" />
+}
+
 @section scripts{
     <script src="~/Content/Library/scripts/InnerDescription.js"></script>
-    
-    }
+
+}
 
 <h2>Edit</h2>
 
@@ -33,11 +37,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control", @id = "txtImage" } })
+                <a href="#" type="button" class="btn btn-success btn-image" id="btnSelectImage">Select</a>
                 @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
             </div>
             <div class="pt-5">
-                <img src="~/Content/Library/@Html.DisplayFor(model => model.Image) " alt="Alternate Text" />
+                <img src="~/Content/Library/@Html.DisplayFor(model => model.Image) " alt="Alternate Text" class="imgSize" />
             </div>
             @*<div class="col-md-4">
                     @if (Model != null)
@@ -69,20 +74,20 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control ", @style = "min-height: 100px;", @id="DetailDescription"} })
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control ", @style = "min-height: 100px;", @id = "DetailDescription" } })
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div id="InnerDiscription">
             @*<label></label>
-            <input type="text" value="" />*@
+                <input type="text" value="" />*@
         </div>
         @*<script>
-            // Add this line for each editor
-            CKEDITOR.replace("Description");
-        </script>*@
-        
+                // Add this line for each editor
+                CKEDITOR.replace("Description");
+            </script>*@
+
         <div class="form-group">
             @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">

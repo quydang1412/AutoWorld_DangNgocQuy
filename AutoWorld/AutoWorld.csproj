@@ -297,6 +297,7 @@
     <Content Include="Content\Library\css\compare.css" />
     <Content Include="Content\Library\css\contact.css" />
     <Content Include="Content\Library\css\details.css" />
+    <Content Include="Content\Library\css\editProduct.css" />
     <Content Include="Content\Library\css\loan.css" />
     <Content Include="Content\Library\css\login.css" />
     <Content Include="Content\Library\css\main.css" />

@@ -42,7 +42,7 @@
                 @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
             </div>
             <div class="pt-5">
-                <img src="~/Content/Library/@Html.DisplayFor(model => model.Image) " alt="Alternate Text" class="imgSize" />
+                <img src="~/Content/Library/@Html.DisplayFor(model => model.Image) " alt="Alternate Text" class="imgSize" id="imgDisplay"/>
             </div>
             @*<div class="col-md-4">
                     @if (Model != null)

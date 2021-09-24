@@ -17,6 +17,7 @@ namespace AutoWorld.Models
         public long Id { get; set; }
 
         [Required]
+        [Display (Name ="Category Name")]
         public string Name { get; set; }
 
         [StringLength(255)]

@@ -1,4 +1,5 @@
-﻿using AutoWorld.Models;
+﻿using AutoWorld.Common;
+using AutoWorld.Models;
 using AutoWorld.Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -39,13 +40,16 @@ namespace AutoWorld.Controllers
 				TempData["Message"] = new NotificationMessage(
 					string.Format("Product \"{0}\" is added to cart.", product.Name),
 					"success");
+				//ViewBag.CountCart = DataUtils.GetNumberOfCartItems(Session["Cart"]);
 			}
 			if (Request.UrlReferrer != null)
 			{
-				return Redirect(Request.UrlReferrer.AbsoluteUri);
+				return PartialView("_Notification");
+				//return Redirect(Request.UrlReferrer.AbsoluteUri);
 			}
 			return RedirectToAction("Index");
 		}
+
 
 		[HttpPost]
 		public ActionResult UpdateCart(long[] productIds, int[] quantities)
@@ -98,6 +102,16 @@ namespace AutoWorld.Controllers
 
 			}
 			return Session["Cart"] as List<CartItem>;
+		}
+
+		public JsonResult UpdateCartNumber()
+        {
+			var data = DataUtils.GetNumberOfCartItems(Session["Cart"]);
+			return Json(new
+			{
+				data = data,
+				status = true
+			}, JsonRequestBehavior.AllowGet);
 		}
 	}
 }

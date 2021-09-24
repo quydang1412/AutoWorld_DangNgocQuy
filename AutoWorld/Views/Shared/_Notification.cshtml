@@ -1,5 +1,6 @@
 ﻿@using AutoWorld.Models.ViewModels
 
+
 @{
     // In this partial view, we demonstrate how to declare and use variables in Razor expression
     NotificationMessage message = TempData["Message"] as NotificationMessage;
@@ -27,7 +28,7 @@
 @if (message != null)
 {
 
-    <div class="alert @alertClass sticky-top hide" role="alert" id="AlertBox">
+    <div class="alert @alertClass " role="alert" id="AlertBox" style="display:none;" >
         @message.Content
     </div>
 }

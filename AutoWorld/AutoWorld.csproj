@@ -288,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
+    <Content Include="Ajax\AddCart.js" />
     <Content Include="Ajax\Contact.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -632,6 +633,7 @@
     <Content Include="Content\Library\scripts\CreateCar.js" />
     <Content Include="Content\Library\scripts\CreateMoto.js" />
     <Content Include="Content\Library\scripts\detail.js" />
+    <Content Include="Content\Library\scripts\HideNotification.js" />
     <Content Include="Content\Library\scripts\home.js" />
     <Content Include="Content\Library\scripts\InnerDescription.js" />
     <Content Include="Content\Library\scripts\loan.js" />
@@ -1784,6 +1786,7 @@
     <Content Include="Views\HomePage\Contact2.cshtml" />
     <Content Include="Views\Products\ProductPartial.cshtml" />
     <Content Include="Views\Shared\_ProductPartialView.cshtml" />
+    <Content Include="Views\Shared\_CartItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

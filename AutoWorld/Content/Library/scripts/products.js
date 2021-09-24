@@ -4,6 +4,23 @@ var p = {
     },
     registerEvent: function () {
         $('#btnSearch').click();
+        
+        $(document).on('click', '.addToCart', function () {
+            
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: '/Cart/UpdateCartNumber',
+                success: function (res) {
+                    if (res.status) {
+                        var count = res.data;
+                        $('#CountCartItem').html(count);
+                    }
+                    
+                }
+
+            });
+        });
     }
 }
 

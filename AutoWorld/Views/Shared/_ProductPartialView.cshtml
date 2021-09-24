@@ -11,19 +11,14 @@
             </a>
             <h4 class="text-center">@Html.DisplayFor(modelItem => item.Name)</h4>
             <h5 class="text-center">Price: $@Html.DisplayFor(modelItem => item.Price)</h5>
-            @*<h5 class="text-center">@Html.DisplayFor(modelItem => item.description) seat</h5>*@
-            <a href="@Url.Action("DetailProduct","Details",new { id = item.Id })" class=" buy btn btn-danger btn-lg ">Details</a>
-            <a href="@Url.Action("AddToCart","Cart",new { id = item.Id })" class=" buy btn btn-danger btn-lg ml-3">Add Cart</a>
-            @*<a>@Html.ActionLink("Add to Cart", "AddToCart", new { controller = "Cart", id = item.Id }, new { class=" buy btn btn-danger btn-lg ")</a>*@
-
-            @{
-                //JsonConvert.SerializeObject
-                //Convert.
-            }
+            <a href="@Url.Action("DetailProduct","Details",new { id = item.Id })" class=" buy btn btn-danger btn-lg ">Details</a>     
+            @Ajax.ActionLink("Add Cart", "AddToCart", "Cart", new { id = item.Id }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "notificationMessage", InsertionMode = InsertionMode.Replace, OnSuccess = "UpdateCartItem" }, new { @class = "addToCart buy btn btn-danger btn-lg" })
         </div>
     </div>
     <!-- ./Product -->
 }
+
+
 
 
 
@@ -66,10 +61,10 @@
             }
 
         }
-        </ul>
+    </ul>
     <div class=" col-2">
         Total <span class="badge badge-success ">@ViewBag.Total</span> Products
     </div>
 </nav>
-    
+
 
